@@ -1,0 +1,54 @@
+{
+  "dates": [
+    {
+      "id": "juin-alpilles",
+      "label_fr": "14–16 juin · Alpilles",
+      "label_en": "June 14–16 · Alpilles",
+      "formule": "sociale",
+      "places_total": 8,
+      "places_restantes": 5,
+      "prix": 920,
+      "statut": "disponible"
+    },
+    {
+      "id": "juillet-luberon",
+      "label_fr": "5–7 juillet · Luberon",
+      "label_en": "July 5–7 · Luberon",
+      "formule": "sociale",
+      "places_total": 8,
+      "places_restantes": 0,
+      "prix": 920,
+      "statut": "complet"
+    },
+    {
+      "id": "sept-vaucluse",
+      "label_fr": "20–22 sept. · Vaucluse",
+      "label_en": "Sept 20–22 · Vaucluse",
+      "formule": "sociale",
+      "places_total": 8,
+      "places_restantes": 3,
+      "prix": 920,
+      "statut": "disponible"
+    },
+    {
+      "id": "oct-alpilles",
+      "label_fr": "11–13 oct. · Alpilles",
+      "label_en": "Oct 11–13 · Alpilles",
+      "formule": "sociale",
+      "places_total": 8,
+      "places_restantes": 8,
+      "prix": 920,
+      "statut": "disponible"
+    },
+    {
+      "id": "privee-sur-demande",
+      "label_fr": "Sur demande · Formule Privée",
+      "label_en": "On request · Private",
+      "formule": "privee",
+      "places_total": null,
+      "places_restantes": null,
+      "prix": 3200,
+      "statut": "disponible"
+    }
+  ]
+}
