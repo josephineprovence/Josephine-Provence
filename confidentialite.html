@@ -1,0 +1,334 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Confidentialité — Joséphine</title>
+<meta name="description" content="Politique de confidentialité et protection des données personnelles — Joséphine Échappées Provençales Secrètes.">
+<meta name="robots" content="noindex, follow">
+<link rel="canonical" href="https://josephine-provence.fr/confidentialite.html">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400;1,700&family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300;1,400&family=Inter:wght@200;300;400;500&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --nuit: #1B263B;
+    --ocre: #D4A373;
+    --terre: #BC6C25;
+    --sauge: #606C38;
+    --creme: #FEFAE0;
+    --creme2: #F5EDD0;
+  }
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+  html { scroll-behavior: smooth; }
+  body {
+    font-family: 'Inter', sans-serif;
+    background: var(--creme);
+    color: var(--nuit);
+    min-height: 100vh;
+  }
+
+  nav {
+    position: fixed; top: 0; left: 0; right: 0; z-index: 200;
+    display: flex; align-items: center; justify-content: space-between;
+    padding: 1.2rem 3rem;
+    background: rgba(254,250,224,0.96);
+    backdrop-filter: blur(12px);
+    box-shadow: 0 1px 0 rgba(27,38,59,0.08);
+  }
+  .nav-logo img { height: 38px; width: auto; }
+  .nav-back {
+    font-size: 0.58rem; letter-spacing: 0.3em; text-transform: uppercase;
+    color: var(--nuit); opacity: 0.5; text-decoration: none;
+    transition: opacity 0.2s;
+    display: flex; align-items: center; gap: 0.6rem;
+  }
+  .nav-back:hover { opacity: 1; }
+  .nav-back::before { content: '←'; font-size: 0.9rem; opacity: 0.6; }
+
+  main {
+    max-width: 680px;
+    margin: 0 auto;
+    padding: 10rem 2rem 6rem;
+  }
+
+  .page-eyebrow {
+    font-size: 0.55rem; letter-spacing: 0.5em; text-transform: uppercase;
+    color: var(--terre); margin-bottom: 1.2rem; display: block;
+  }
+  h1 {
+    font-family: 'Playfair Display', serif;
+    font-size: clamp(2rem, 5vw, 3.5rem);
+    font-style: italic; font-weight: 400; line-height: 1.05;
+    color: var(--nuit); margin-bottom: 0.5rem;
+  }
+  .update-date {
+    font-size: 0.6rem; letter-spacing: 0.2em; text-transform: uppercase;
+    color: rgba(27,38,59,0.35); margin-bottom: 3.5rem; display: block;
+  }
+
+  .legal-section { margin-bottom: 3rem; }
+  .legal-section + .legal-section {
+    border-top: 1px solid rgba(27,38,59,0.08);
+    padding-top: 3rem;
+  }
+
+  h2 {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1.1rem; font-weight: 400; font-style: italic;
+    letter-spacing: 0.05em;
+    color: var(--terre); margin-bottom: 1.2rem;
+  }
+
+  p {
+    font-size: 0.88rem; font-weight: 300; line-height: 1.85;
+    color: rgba(27,38,59,0.75);
+    margin-bottom: 0.8rem;
+  }
+  p:last-child { margin-bottom: 0; }
+
+  /* Table de données */
+  .data-table {
+    width: 100%; border-collapse: collapse;
+    margin: 1.2rem 0; font-size: 0.82rem;
+  }
+  .data-table thead tr {
+    border-bottom: 1px solid rgba(27,38,59,0.15);
+  }
+  .data-table th {
+    font-size: 0.5rem; letter-spacing: 0.4em; text-transform: uppercase;
+    color: rgba(27,38,59,0.4); font-weight: 400;
+    padding: 0 1rem 0.8rem 0; text-align: left;
+  }
+  .data-table td {
+    font-size: 0.82rem; font-weight: 300; line-height: 1.65;
+    color: rgba(27,38,59,0.72);
+    padding: 0.8rem 1rem 0.8rem 0;
+    vertical-align: top;
+    border-bottom: 1px solid rgba(27,38,59,0.05);
+  }
+  .data-table tr:last-child td { border-bottom: none; }
+
+  /* Droits box */
+  .droits-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 0.8rem;
+    margin: 1.2rem 0;
+  }
+  .droit-item {
+    padding: 1rem 1.2rem;
+    background: rgba(27,38,59,0.03);
+    border: 1px solid rgba(27,38,59,0.06);
+  }
+  .droit-label {
+    font-size: 0.52rem; letter-spacing: 0.3em; text-transform: uppercase;
+    color: var(--sauge); display: block; margin-bottom: 0.4rem;
+  }
+  .droit-desc {
+    font-size: 0.78rem; font-weight: 300; line-height: 1.6;
+    color: rgba(27,38,59,0.65);
+  }
+
+  /* Cookies badge */
+  .cookie-badge {
+    display: inline-block;
+    font-size: 0.58rem; letter-spacing: 0.2em; text-transform: uppercase;
+    padding: 0.3rem 0.8rem;
+    border: 1px solid rgba(96,108,56,0.3);
+    color: var(--sauge);
+    margin-right: 0.5rem; margin-bottom: 0.5rem;
+  }
+
+  a { color: var(--terre); text-decoration: none; border-bottom: 1px solid rgba(188,108,37,0.3); transition: border-color 0.2s; }
+  a:hover { border-color: var(--terre); }
+
+  footer {
+    text-align: center;
+    padding: 2rem;
+    font-size: 0.5rem; letter-spacing: 0.4em; text-transform: uppercase;
+    color: rgba(27,38,59,0.25);
+    border-top: 1px solid rgba(27,38,59,0.06);
+  }
+  footer a { color: inherit; border: none; }
+  footer a:hover { color: rgba(27,38,59,0.6); }
+
+  @media(max-width: 768px) {
+    nav { padding: 1rem 1.5rem; }
+    .nav-logo img { height: 28px; }
+    main { padding: 8rem 1.5rem 5rem; }
+    .droits-grid { grid-template-columns: 1fr; }
+    .data-table { font-size: 0.78rem; }
+  }
+</style>
+</head>
+<body>
+
+<nav aria-label="Navigation">
+  <a class="nav-logo" href="/">
+    <img src="/logo.svg" alt="Joséphine — Retour à l'accueil">
+  </a>
+  <a class="nav-back" href="/">Retour</a>
+</nav>
+
+<main>
+
+  <span class="page-eyebrow">Joséphine — Échappées Provençales Secrètes</span>
+  <h1>Confidentialité</h1>
+  <span class="update-date">Mise à jour : avril 2026</span>
+
+  <!-- INTRO -->
+  <div class="legal-section">
+    <p>Joséphine SAS accorde une importance particulière à la protection de vos données personnelles. Cette politique explique quelles données nous collectons, pourquoi, et comment vous pouvez exercer vos droits.</p>
+    <p>Responsable de traitement&nbsp;: Joséphine SAS, <a href="mailto:bonjour@josephine-provence.fr">bonjour@josephine-provence.fr</a>.</p>
+  </div>
+
+  <!-- 1. DONNÉES COLLECTÉES -->
+  <div class="legal-section">
+    <h2>1. Données collectées et finalités</h2>
+    <p>Nous collectons uniquement les données nécessaires aux finalités décrites ci-dessous.</p>
+
+    <table class="data-table" aria-label="Tableau des données collectées">
+      <thead>
+        <tr>
+          <th>Donnée</th>
+          <th>Finalité</th>
+          <th>Base légale</th>
+          <th>Durée</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Adresse e-mail</td>
+          <td>Envoi des Lettres de Joséphine (newsletter)</td>
+          <td>Consentement</td>
+          <td>Jusqu'au désabonnement</td>
+        </tr>
+        <tr>
+          <td>Prénom, e-mail</td>
+          <td>Réponse à une demande de contact ou d'information</td>
+          <td>Intérêt légitime</td>
+          <td>3 ans à compter du dernier contact</td>
+        </tr>
+        <tr>
+          <td>Données de navigation (logs Netlify)</td>
+          <td>Sécurité et bon fonctionnement du site</td>
+          <td>Intérêt légitime</td>
+          <td>30 jours</td>
+        </tr>
+        <tr>
+          <td>Statistiques de visite (Matomo)</td>
+          <td>Amélioration du site (données anonymisées)</td>
+          <td>Intérêt légitime</td>
+          <td>13 mois</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <p>Nous ne collectons aucune donnée sensible (origine ethnique, opinions politiques, santé, etc.).</p>
+  </div>
+
+  <!-- 2. DESTINATAIRES -->
+  <div class="legal-section">
+    <h2>2. Destinataires des données</h2>
+    <p>Vos données sont destinées à Joséphine SAS exclusivement. Nous ne vendons, ne louons, ni ne cédons vos données à des tiers à des fins commerciales.</p>
+    <p>Certains prestataires techniques accèdent à vos données dans le cadre strict de leur mission&nbsp;:</p>
+    <table class="data-table" aria-label="Tableau des sous-traitants">
+      <thead>
+        <tr>
+          <th>Prestataire</th>
+          <th>Rôle</th>
+          <th>Pays</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Netlify, Inc.</td>
+          <td>Hébergement du site et formulaires</td>
+          <td>États-Unis (clauses contractuelles types)</td>
+        </tr>
+        <tr>
+          <td>Matomo Cloud</td>
+          <td>Mesure d'audience anonymisée</td>
+          <td>Union Européenne</td>
+        </tr>
+      </tbody>
+    </table>
+    <p>Pour les transferts hors UE (Netlify), les garanties appropriées sont assurées via les clauses contractuelles types de la Commission européenne.</p>
+  </div>
+
+  <!-- 3. VOS DROITS -->
+  <div class="legal-section">
+    <h2>3. Vos droits</h2>
+    <p>Conformément au Règlement Général sur la Protection des Données (RGPD) et à la loi Informatique et Libertés, vous disposez des droits suivants&nbsp;:</p>
+
+    <div class="droits-grid">
+      <div class="droit-item">
+        <span class="droit-label">Accès</span>
+        <span class="droit-desc">Obtenir une copie des données vous concernant.</span>
+      </div>
+      <div class="droit-item">
+        <span class="droit-label">Rectification</span>
+        <span class="droit-desc">Faire corriger des données inexactes ou incomplètes.</span>
+      </div>
+      <div class="droit-item">
+        <span class="droit-label">Suppression</span>
+        <span class="droit-desc">Demander l'effacement de vos données dans les cas prévus par le RGPD.</span>
+      </div>
+      <div class="droit-item">
+        <span class="droit-label">Opposition</span>
+        <span class="droit-desc">Vous opposer à un traitement fondé sur l'intérêt légitime.</span>
+      </div>
+      <div class="droit-item">
+        <span class="droit-label">Portabilité</span>
+        <span class="droit-desc">Recevoir vos données dans un format structuré et lisible.</span>
+      </div>
+      <div class="droit-item">
+        <span class="droit-label">Retrait du consentement</span>
+        <span class="droit-desc">Vous désabonner à tout moment de la newsletter.</span>
+      </div>
+    </div>
+
+    <p>Pour exercer vos droits, contactez-nous à&nbsp;: <a href="mailto:bonjour@josephine-provence.fr">bonjour@josephine-provence.fr</a>. Nous répondons dans un délai d'un mois.</p>
+    <p>Vous pouvez également introduire une réclamation auprès de la <a href="https://www.cnil.fr" target="_blank" rel="noopener">CNIL</a> (Commission Nationale de l'Informatique et des Libertés).</p>
+  </div>
+
+  <!-- 4. COOKIES -->
+  <div class="legal-section">
+    <h2>4. Cookies et traceurs</h2>
+    <p>Ce site utilise uniquement des cookies strictement nécessaires à son bon fonctionnement, ainsi qu'un outil de mesure d'audience anonymisé (Matomo, configuré sans cookies de traçage inter-sites).</p>
+
+    <div style="margin: 1.2rem 0;">
+      <span class="cookie-badge">Fonctionnels</span>
+      <span class="cookie-badge">Analytiques anonymisés</span>
+    </div>
+
+    <p>Aucun cookie publicitaire, aucun réseau social tiers embarqué. Matomo est configuré pour respecter le signal <em>Do Not Track</em> de votre navigateur et ne dépose pas de cookie lorsque cette option est activée.</p>
+    <p>Vous pouvez à tout moment désactiver les cookies analytiques en activant l'option «&thinsp;Do Not Track&thinsp;» dans les paramètres de votre navigateur, ou en utilisant le mécanisme de refus de Matomo.</p>
+  </div>
+
+  <!-- 5. NEWSLETTER -->
+  <div class="legal-section">
+    <h2>5. Newsletter — Les Lettres de Joséphine</h2>
+    <p>En vous inscrivant à notre newsletter, vous consentez expressément à recevoir nos communications par e-mail. Chaque e-mail contient un lien de désabonnement permettant de retirer votre consentement à tout moment, sans justification et sans frais.</p>
+    <p>Votre adresse e-mail ne sera jamais partagée avec des tiers ni utilisée à d'autres fins que l'envoi de ces lettres.</p>
+  </div>
+
+  <!-- 6. SÉCURITÉ -->
+  <div class="legal-section">
+    <h2>6. Sécurité</h2>
+    <p>Nous mettons en œuvre des mesures techniques et organisationnelles appropriées pour protéger vos données contre tout accès non autorisé, perte ou destruction. Le site est servi exclusivement en HTTPS.</p>
+  </div>
+
+  <!-- 7. MODIFICATIONS -->
+  <div class="legal-section">
+    <h2>7. Modifications de cette politique</h2>
+    <p>Nous pouvons être amenées à modifier cette politique pour refléter des évolutions légales ou de nos pratiques. La date de mise à jour est indiquée en haut de page. En cas de modification substantielle, nous vous en informerons par e-mail si vous êtes abonné·e à notre newsletter.</p>
+  </div>
+
+</main>
+
+<footer>
+  <span>© 2026 Joséphine SAS · <a href="/">josephine-provence.fr</a> · <a href="/mentions-legales.html">Mentions légales</a></span>
+</footer>
+
+</body>
+</html>

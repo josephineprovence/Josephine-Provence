@@ -1,0 +1,1016 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Joséphine — Échappées Provençales Secrètes | Slow Travel Alpilles Luberon Vaucluse</title>
+<meta name="description" content="Week-ends slow travel en Provence avec Justine & Naomi. Alpilles, Luberon, Vaucluse — marchés, tables secrètes, rencontres pour la vie. Formule solo ou groupe privé.">
+<meta name="keywords" content="slow travel Provence, week-end Provence, Alpilles, Luberon, Vaucluse, voyage solo femme, voyage Provence groupe, Gordes, Saint-Rémy-de-Provence, Arles">
+<meta name="author" content="Joséphine — Justine Héritier & Naomi Da-Kengba-Timo">
+<link rel="canonical" href="https://josephine-provence.fr/">
+<meta name="robots" content="index, follow">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://josephine-provence.fr/">
+<meta property="og:title" content="Joséphine — Échappées Provençales Secrètes">
+<meta property="og:description" content="Week-ends slow travel en Provence. Alpilles, Luberon, Vaucluse — des rencontres, des adresses secrètes, zéro charge mentale.">
+<meta property="og:image" content="https://josephine-provence.fr/hero.png">
+<meta property="og:locale" content="fr_FR">
+<meta property="og:site_name" content="Joséphine">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Joséphine — Échappées Provençales Secrètes">
+<meta name="twitter:description" content="Week-ends slow travel en Provence. Alpilles, Luberon, Vaucluse.">
+<meta name="twitter:image" content="https://josephine-provence.fr/hero.png">
+<link rel="icon" href="/logo.svg" type="image/svg+xml">
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "TravelAgency",
+      "@id": "https://josephine-provence.fr/#organization",
+      "name": "Joséphine — Échappées Provençales",
+      "url": "https://josephine-provence.fr/",
+      "founder": [
+        { "@type": "Person", "name": "Justine Héritier" },
+        { "@type": "Person", "name": "Naomi Da-Kengba-Timo" }
+      ],
+      "areaServed": { "@type": "Place", "name": "Provence, France" },
+      "contactPoint": {
+        "@type": "ContactPoint",
+        "email": "bonjour@josephine-provence.fr",
+        "availableLanguage": ["French","English"]
+      },
+      "sameAs": ["https://www.instagram.com/josephine.provence"]
+    }
+  ]
+}
+</script>
+
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400;1,700&family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300;1,400&family=Inter:wght@200;300;400;500&display=swap" rel="stylesheet">
+
+<style>
+:root {
+  --nuit: #1B263B;
+  --ocre: #D4A373;
+  --terre: #BC6C25;
+  --sauge: #606C38;
+  --creme: #FEFAE0;
+  --creme2: #F5EDD0;
+  --nuit-light: rgba(27,38,59,0.72);
+  --sauge-light: #8a9a58;
+}
+
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
+html{scroll-behavior:smooth;}
+body{font-family:'Inter',sans-serif;background:var(--creme);color:var(--nuit);overflow-x:hidden;}
+.serif{font-family:'Playfair Display',serif;}
+.cormnt{font-family:'Cormorant Garamond',serif;}
+
+/* ─── NAV ─── */
+#nav{
+  position:fixed;top:0;left:0;right:0;z-index:200;
+  display:flex;align-items:center;justify-content:space-between;
+  padding:1.2rem 3rem;
+  transition:background 0.4s,box-shadow 0.4s;
+}
+#nav.scrolled{
+  background:rgba(254,250,224,0.96);
+  backdrop-filter:blur(12px);
+  box-shadow:0 1px 0 rgba(27,38,59,0.08);
+}
+.nav-logo img{height:38px;width:auto;filter:brightness(0) invert(1);transition:filter 0.3s;}
+.nav-right{display:flex;align-items:center;gap:2rem;}
+.lang-toggle{display:flex;gap:0.5rem;align-items:center;font-size:0.65rem;letter-spacing:0.3em;text-transform:uppercase;}
+.lang-toggle button{background:none;border:none;cursor:pointer;font:inherit;letter-spacing:inherit;text-transform:inherit;color:rgba(254,250,224,0.85);opacity:0.7;transition:opacity 0.2s,color 0.3s;padding:0.2rem 0;}
+.lang-toggle button.active{opacity:1;border-bottom:1px solid currentColor;}
+.nav-cta{background:var(--terre);color:var(--creme);border:none;cursor:pointer;font-size:0.58rem;font-weight:500;letter-spacing:0.3em;text-transform:uppercase;padding:0.75rem 1.6rem;transition:background 0.25s;white-space:nowrap;}
+.nav-cta:hover{background:var(--nuit);}
+
+/* ─── SCROLL SNAP ─── */
+@media(min-width:769px){
+  body{overflow:hidden;height:100vh;}
+  #scroller{height:100vh;overflow-y:auto;overflow-x:hidden;scroll-snap-type:y mandatory;scrollbar-width:none;}
+  #scroller::-webkit-scrollbar{display:none;}
+  .panel{height:100vh;min-height:unset;scroll-snap-align:start;}
+}
+@media(min-width:769px){.nav-cta{display:inline-block !important;}}
+@media(max-width:768px){
+  body{overflow-y:auto;height:auto;}
+  #scroller{height:auto;overflow:visible;scroll-snap-type:none;}
+  .panel{min-height:100svh;height:auto;}
+  #nav{padding:1rem 1.5rem;}
+  .nav-logo img{height:30px;}
+  .nav-cta{display:none;}
+}
+
+/* ─── PANEL BASE ─── */
+.panel{width:100vw;position:relative;display:flex;align-items:center;justify-content:center;overflow:hidden;}
+.bg-photo{position:absolute;inset:0;background-size:cover;background-position:center;filter:brightness(0.65);transition:filter 0.8s;}
+.vignette{position:absolute;inset:0;z-index:2;background:radial-gradient(ellipse at 50% 110%,rgba(212,163,115,0.08) 0%,transparent 65%),linear-gradient(to top,rgba(27,38,59,0.3) 0%,transparent 45%);}
+.overlay{position:relative;z-index:10;width:100%;height:100%;display:flex;flex-direction:column;justify-content:center;padding:0 8vw;}
+.overlay.center{align-items:center;text-align:center;padding:0 8%;}
+.overlay.padless{padding:0;}
+
+/* ─── ANIMATIONS ─── */
+.panel .rise{animation:fadeUp 0.9s cubic-bezier(0.22,1,0.36,1) both;}
+@keyframes fadeUp{from{opacity:0;transform:translateY(24px);}to{opacity:1;transform:translateY(0);}}
+
+/* ─── SCROLL CUE ─── */
+.scroll-cue{position:absolute;bottom:2rem;left:50%;transform:translateX(-50%);display:flex;flex-direction:column;align-items:center;gap:0.5rem;z-index:10;}
+.scroll-cue span{font-size:0.42rem;letter-spacing:0.5em;text-transform:uppercase;color:rgba(254,250,224,0.62);}
+.scroll-cue-line{width:1px;height:3rem;background:linear-gradient(to bottom,transparent,rgba(212,163,115,0.7));animation:cue 2s ease-in-out infinite;}
+@keyframes cue{0%,100%{opacity:0.4;}50%{opacity:1;}}
+
+/* ─── HERO ─── */
+.hero-eyebrow{font-size:clamp(0.55rem,1.1vw,0.82rem);letter-spacing:0.5em;text-transform:uppercase;color:rgba(254,250,224,0.78);margin-bottom:1rem;font-weight:400;}
+.hero-h1{font-family:'Playfair Display',serif;font-size:clamp(3.8rem,10vw,10rem);line-height:0.9;font-weight:400;color:var(--creme);margin-bottom:2rem;}
+.hero-sub{font-family:'Cormorant Garamond',serif;font-size:clamp(1.1rem,2.5vw,1.8rem);font-style:italic;font-weight:300;color:rgba(254,250,224,0.7);}
+@media(max-width:768px){
+  .hero-h1{font-size:clamp(3.5rem,18vw,6rem);margin-bottom:1.2rem;}
+  .hero-sub{font-size:1.1rem;}
+  .hero-eyebrow{font-size:0.52rem;letter-spacing:0.4em;}
+}
+
+/* ─── COLOURS ─── */
+.panel-creme{background:var(--creme);color:var(--nuit);}
+.panel-creme2{background:var(--creme2);color:var(--nuit);}
+.panel-nuit{background:var(--nuit);color:var(--creme);}
+.panel-sauge{background:#4a5228;color:var(--creme);}
+
+/* ─── TYPOGRAPHY HELPERS ─── */
+.eyebrow-dark{font-size:0.58rem;letter-spacing:0.42em;text-transform:uppercase;color:var(--terre);margin-bottom:1.2rem;display:block;}
+.eyebrow-light{font-size:0.58rem;letter-spacing:0.42em;text-transform:uppercase;color:rgba(254,250,224,0.62);margin-bottom:1.2rem;display:block;}
+.section-h2-dark{font-family:'Playfair Display',serif;font-size:clamp(1.8rem,3.2vw,3.2rem);font-style:italic;line-height:1.05;color:var(--nuit);margin-bottom:1.2rem;}
+.section-h2-light{font-family:'Playfair Display',serif;font-size:clamp(1.8rem,3.2vw,3.2rem);font-style:italic;line-height:1.05;color:var(--creme);margin-bottom:1.2rem;}
+.body-dark{font-size:0.92rem;font-weight:300;line-height:1.8;color:rgba(27,38,59,0.78);max-width:44ch;}
+.body-light{font-size:0.92rem;font-weight:300;line-height:1.8;color:rgba(254,250,224,0.78);max-width:44ch;}
+.trinity{font-size:0.7rem;letter-spacing:0.3em;text-transform:uppercase;color:var(--terre);line-height:2.6;}
+
+/* ─── TERRITOIRE ─── */
+.territoire-grid{display:grid;grid-template-columns:repeat(3,1fr);width:100%;height:100%;}
+.territoire-col{position:relative;overflow:hidden;border-right:1px solid rgba(254,250,224,0.07);display:flex;flex-direction:column;justify-content:flex-end;padding:2.5rem 3rem;}
+.territoire-col:last-child{border-right:none;}
+.t-bg{position:absolute;inset:0;background-size:cover;background-position:center;filter:brightness(0.58) saturate(0.92);transition:filter 1.2s,transform 1.4s;}
+.territoire-col:hover .t-bg{filter:brightness(0.72) saturate(1.1);transform:scale(1.06);}
+.t-vignette{position:absolute;inset:0;z-index:2;background:linear-gradient(to top,rgba(27,38,59,0.65) 0%,rgba(27,38,59,0.02) 55%);}
+.t-content{position:relative;z-index:10;}
+.t-num{font-size:0.5rem;letter-spacing:0.5em;text-transform:uppercase;color:var(--ocre);display:block;margin-bottom:1rem;}
+.t-name{font-family:'Playfair Display',serif;font-size:clamp(1.6rem,2.2vw,2.4rem);font-style:italic;color:var(--creme);margin-bottom:0.8rem;line-height:1.1;}
+.t-desc{font-size:0.72rem;line-height:1.85;color:rgba(254,250,224,0.5);max-width:24ch;}
+.t-places{font-family:'Cormorant Garamond',serif;font-style:italic;font-size:0.9rem;color:rgba(212,163,115,0.65);margin-top:1rem;}
+@media(max-width:768px){
+  .territoire-grid{grid-template-columns:1fr;}
+  .territoire-col{border-right:none;border-bottom:1px solid rgba(254,250,224,0.07);min-height:34svh;padding:2rem;}
+  .territoire-col:last-child{border-bottom:none;}
+  .t-name{font-size:1.6rem;}
+}
+
+/* ─── EXP GRID ─── */
+.exp-grid{display:grid;grid-template-columns:1fr 1fr;gap:5rem;align-items:center;width:100%;}
+@media(max-width:768px){.exp-grid{grid-template-columns:1fr;gap:2rem;}.exp-right{display:none;}}
+
+/* ─── JOURNÉE ─── */
+.journee-grid{display:grid;grid-template-columns:repeat(4,1fr);width:100%;height:100%;}
+.moment{position:relative;overflow:hidden;border-right:1px solid rgba(254,250,224,0.05);display:flex;flex-direction:column;justify-content:flex-end;padding:2rem;}
+.moment:last-child{border-right:none;}
+.m-bg{position:absolute;inset:0;filter:grayscale(0.1) brightness(0.85) saturate(1.05);transition:filter 1s,transform 1.2s;}
+.moment:hover .m-bg{filter:grayscale(0) brightness(0.92);transform:scale(1.06);}
+.m-bg img{width:100%;height:100%;object-fit:cover;}
+.m-vignette{position:absolute;inset:0;background:linear-gradient(to top,rgba(27,38,59,0.55) 0%,rgba(27,38,59,0.1) 50%,transparent 75%);z-index:2;}
+.m-content{position:relative;z-index:10;}
+.m-time{font-size:0.45rem;letter-spacing:0.55em;text-transform:uppercase;color:var(--ocre);display:block;margin-bottom:0.6rem;}
+.m-title{font-family:'Playfair Display',serif;font-size:clamp(1.3rem,1.8vw,2rem);font-style:italic;color:var(--creme);margin-bottom:0.6rem;}
+.m-desc{font-size:0.68rem;line-height:1.85;color:rgba(254,250,224,0.5);max-width:28ch;}
+@media(max-width:768px){
+  .journee-grid{grid-template-columns:1fr 1fr;}
+  .moment{min-height:50svh;}
+  .journee-header{padding:5rem 1.8rem 1rem !important;}
+  .journee-bandeau-col-first{padding-left:1.8rem !important;}
+  .journee-bandeau-col-last{padding-right:1.8rem !important;}
+}
+@media(max-width:480px){.journee-grid{grid-template-columns:1fr;}.moment{min-height:35svh;}}
+
+/* ─── ESPRIT ─── */
+#esprit{overflow:hidden;}
+.esprit-split{display:grid;grid-template-columns:1fr 1fr 1fr;width:100%;height:100%;}
+.esprit-left{
+  display:flex;flex-direction:column;justify-content:center;
+  padding:6rem 8vw 2rem 8vw;box-sizing:border-box;
+  overflow:hidden;gap:0;
+}
+.esprit-left .body-dark{max-width:none;}
+.esprit-photo-col{position:relative;overflow:hidden;background:transparent;}
+.esprit-photo-col img{
+  position:absolute;inset:0;width:100%;height:100%;
+  object-fit:cover;object-position:center 15%;
+}
+.founders-note{display:flex;flex-direction:column;gap:0.3rem;margin:1rem 0 0.4rem;}
+.founders-speech{font-size:0.82rem;line-height:1.72;color:rgba(27,38,59,0.65);font-style:italic;font-family:'Cormorant Garamond',serif;}
+.founders-sig{font-size:0.5rem;letter-spacing:0.25em;text-transform:uppercase;color:var(--sauge);margin-top:0.1rem;}
+@media(max-width:768px){
+  .esprit-split{grid-template-columns:1fr;height:auto;}
+  .esprit-left{grid-column:auto;}
+  .esprit-photo-col{min-height:55svh;order:-1;overflow:hidden;}
+  .esprit-photo-col img{width:100%;height:100%;object-fit:cover;object-position:center 15%;top:0;left:0;transform:none;}
+  .esprit-left{padding:2.5rem 1.8rem 3rem;overflow-y:visible;}
+}
+
+/* ─── FORMULES ─── */
+.formules-grid{display:grid;grid-template-columns:1fr 1fr;width:100%;height:100%;}
+@media(max-width:768px){
+  .formules-grid{grid-template-columns:1fr;}
+  .formule-left{padding:5.5rem 1.8rem 2rem;overflow-y:auto;}
+  .formule-img{min-height:40svh;}
+  .formule-right{padding:2rem 1.8rem 3rem !important;overflow-y:auto;}
+}
+.formule-left{display:flex;flex-direction:column;justify-content:flex-start;padding:7rem 4rem 2rem 5%;box-sizing:border-box;border-right:1px solid rgba(254,250,224,0.1);gap:0;overflow-y:auto;}
+.formule-block{padding:2.2rem 0;border-bottom:1px solid rgba(254,250,224,0.07);}
+.formule-block:first-child{padding-top:0;}
+.formule-block:last-child{border-bottom:none;padding-bottom:0;}
+.formule-tag{font-size:0.58rem;letter-spacing:0.38em;text-transform:uppercase;color:var(--ocre);margin-bottom:0.6rem;display:block;}
+.formule-title{font-family:'Playfair Display',serif;font-size:clamp(1.6rem,2vw,2.4rem);font-style:italic;color:var(--creme);margin-bottom:0.8rem;line-height:1.05;}
+.formule-body{font-size:0.88rem;font-weight:300;line-height:1.8;color:rgba(254,250,224,0.72);margin-bottom:0.9rem;}
+.formule-quote{font-family:'Cormorant Garamond',serif;font-style:italic;font-size:0.95rem;color:var(--sauge-light,rgba(138,154,88,0.9));margin-bottom:0.8rem;font-weight:300;}
+.idea-chips{display:flex;flex-wrap:wrap;gap:0.45rem;margin:0.8rem 0 1rem;}
+.idea-chip{font-size:0.65rem;font-family:'Cormorant Garamond',serif;font-style:italic;color:rgba(254,250,224,0.55);border:1px solid rgba(254,250,224,0.1);padding:0.3rem 0.75rem;border-radius:100px;white-space:nowrap;transition:border-color 0.3s,color 0.3s;}
+.idea-chip:hover{border-color:rgba(138,154,88,0.5);color:var(--sauge-light);}
+
+/* ─── FORM ─── */
+.resa-form{display:flex;flex-direction:column;}
+.resa-row{display:flex;gap:0.6rem;}
+.resa-field{flex:1;}
+.resa-input{width:100%;box-sizing:border-box;background:rgba(254,250,224,0.05);border:1px solid rgba(254,250,224,0.15);padding:0.7rem 1rem;font-size:0.72rem;letter-spacing:0.08em;color:var(--creme);outline:none;transition:border-color 0.3s,background 0.3s;font-family:'Inter',sans-serif;}
+.resa-input::placeholder{color:rgba(254,250,224,0.3);}
+.resa-input:focus{border-color:rgba(254,250,224,0.4);background:rgba(254,250,224,0.08);}
+.resa-select{appearance:none;cursor:pointer;}
+.resa-select option{background:#1B263B;color:var(--creme);}
+.resa-btn{margin-top:1rem;background:var(--terre);border:none;padding:1rem 2rem;font-size:0.6rem;letter-spacing:0.4em;text-transform:uppercase;font-weight:600;color:var(--creme);cursor:pointer;transition:background 0.3s;align-self:flex-start;}
+.resa-btn:hover{background:var(--ocre);}
+.resa-note{font-size:0.58rem;letter-spacing:0.12em;text-transform:uppercase;color:rgba(254,250,224,0.25);margin-top:0.7rem;}
+@media(max-width:768px){.resa-row{flex-direction:column;gap:0.5rem;}.resa-btn{align-self:stretch;text-align:center;}}
+
+/* ─── BUTTONS ─── */
+.btn-line{font-size:0.6rem;letter-spacing:0.4em;text-transform:uppercase;font-weight:500;border:none;border-bottom:1px solid rgba(254,250,224,0.3);padding-bottom:0.5rem;background:none;color:var(--creme);cursor:pointer;transition:border-color 0.3s,color 0.3s;align-self:flex-start;}
+.btn-line:hover{border-color:var(--ocre);color:var(--ocre);}
+.btn-line-dark{font-size:0.6rem;letter-spacing:0.4em;text-transform:uppercase;font-weight:500;border:none;border-bottom:1px solid rgba(27,38,59,0.25);padding-bottom:0.5rem;background:none;color:var(--nuit);cursor:pointer;transition:border-color 0.3s,color 0.3s;align-self:flex-start;}
+.btn-line-dark:hover{border-color:var(--terre);color:var(--terre);}
+
+/* ─── NEWSLETTER ─── */
+.newsletter-form{display:flex;max-width:28rem;width:100%;}
+@media(max-width:480px){.newsletter-form{flex-direction:column;}}
+.newsletter-form input{flex:1;background:rgba(27,38,59,0.06);border:1px solid rgba(27,38,59,0.15);border-right:none;padding:1rem 1.5rem;outline:none;font-size:0.65rem;letter-spacing:0.15em;text-transform:uppercase;color:var(--nuit);transition:background 0.3s;}
+.newsletter-form input:focus{background:rgba(27,38,59,0.1);}
+.newsletter-form input::placeholder{color:rgba(27,38,59,0.35);}
+.newsletter-form button{background:var(--nuit);border:1px solid var(--nuit);padding:1rem 1.8rem;font-size:0.55rem;letter-spacing:0.3em;text-transform:uppercase;font-weight:600;color:var(--creme);cursor:pointer;transition:background 0.3s;white-space:nowrap;}
+.newsletter-form button:hover{background:var(--terre);border-color:var(--terre);}
+@media(max-width:480px){.newsletter-form input{border-right:1px solid rgba(27,38,59,0.15);border-bottom:none;}.newsletter-form button{padding:1rem;}}
+
+/* ─── CONTACT ─── */
+.contact-input{width:100%;background:transparent;border:none;border-bottom:1px solid rgba(254,250,224,0.12);padding:1.1rem 0;outline:none;font-size:0.7rem;letter-spacing:0.2em;text-transform:uppercase;color:var(--creme);font-family:'Inter',sans-serif;transition:border-color 0.3s;}
+.contact-input:focus{border-color:rgba(212,163,115,0.5);}
+.contact-input::placeholder{color:rgba(254,250,224,0.25);}
+.btn-submit{width:100%;padding:1.4rem;border:1px solid rgba(254,250,224,0.12);background:transparent;color:var(--creme);font-size:0.6rem;letter-spacing:0.45em;text-transform:uppercase;font-weight:600;cursor:pointer;font-family:'Inter',sans-serif;transition:background 0.3s,border-color 0.3s,color 0.3s;}
+.btn-submit:hover{background:rgba(212,163,115,0.12);border-color:rgba(212,163,115,0.4);color:var(--ocre);}
+
+/* ─── FOOTER ─── */
+.site-footer{position:absolute;bottom:1.8rem;left:3%;right:3%;display:flex;justify-content:space-between;align-items:center;font-size:0.48rem;text-transform:uppercase;letter-spacing:0.4em;color:rgba(254,250,224,0.2);}
+.site-footer a{color:inherit;text-decoration:none;}
+.site-footer a:hover{color:rgba(254,250,224,0.62);}
+@media(max-width:768px){.site-footer{display:none;}}
+
+/* ─── GRAIN ─── */
+.grain{position:fixed;inset:0;z-index:400;pointer-events:none;opacity:0.025;background-image:url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.75' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.12'/%3E%3C/svg%3E");}
+
+/* ─── ACCESSIBILITY ─── */
+.skip-link{position:absolute;top:-100px;left:1rem;z-index:9999;background:var(--nuit);color:var(--creme);padding:0.75rem 1.5rem;font-size:0.85rem;font-weight:600;letter-spacing:0.05em;text-decoration:none;border-radius:0 0 4px 4px;transition:top 0.2s;}
+.skip-link:focus{top:0;outline:3px solid var(--ocre);outline-offset:2px;}
+:focus-visible{outline:3px solid var(--ocre)!important;outline-offset:3px!important;}
+button:focus-visible,a:focus-visible,input:focus-visible,textarea:focus-visible,select:focus-visible{outline:3px solid var(--ocre);outline-offset:3px;border-radius:2px;}
+:focus:not(:focus-visible){outline:none;}
+.sr-only{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0;}
+@media(prefers-reduced-motion:reduce){*,*::before,*::after{animation-duration:0.01ms!important;animation-iteration-count:1!important;transition-duration:0.01ms!important;scroll-behavior:auto!important;}.bg-photo,.t-bg,.m-bg img,.formule-img-bg{transition:none!important;}}
+</style>
+</head>
+
+<body>
+<a href="#main-content" class="skip-link">Aller au contenu principal</a>
+<a href="#contact" class="skip-link">Aller au formulaire de contact</a>
+<div class="grain" aria-hidden="true"></div>
+
+<!-- ─── NAV ─── -->
+<nav id="nav" aria-label="Navigation principale" role="navigation">
+  <a class="nav-logo" href="#hero">
+    <img id="nav-logo-img" alt="Joséphine — Retour à l'accueil" src="/logo.svg">
+  </a>
+  <div class="nav-right">
+    <div class="lang-toggle">
+      <button type="button" id="btn-lang-fr" onclick="setLang('fr')" aria-pressed="false" aria-label="Passer en français">FR</button>
+      <span style="opacity:0.25">|</span>
+      <button type="button" id="btn-lang-en" class="active" onclick="setLang('en')" aria-pressed="true" aria-label="Switch to English">EN</button>
+    </div>
+    <button type="button" class="nav-cta" onclick="document.getElementById('waitlist').scrollIntoView({behavior:'smooth'})" data-i18n="nav_cta">Avant-première</button>
+  </div>
+</nav>
+
+<main id="scroller" role="main">
+<div id="main-content" tabindex="-1"></div>
+
+<!-- ══ 0 · HERO ══ -->
+<section class="panel" id="hero" tabindex="-1" aria-label="Accueil">
+  <div class="bg-photo" role="img" aria-label="Table en pierre dressée pour un dîner en plein air sous un grand arbre, dans un jardin de bastide provençale au coucher du soleil" style="background-image:url('/hero.png');background-position:center 40%;"></div>
+  <div class="vignette" aria-hidden="true"></div>
+  <div class="overlay center">
+    <span class="hero-eyebrow rise" data-i18n="hero_eyebrow">Slow Travel · Alpilles · Luberon · Vaucluse</span>
+    <h1 class="hero-h1 rise" style="animation-delay:0.2s">Joséphine.</h1>
+    <p class="hero-sub rise" style="animation-delay:0.45s" data-i18n="hero_sub">Partir seul·e ne veut pas dire être seul·e.</p>
+  </div>
+  <div class="scroll-cue rise" style="animation-delay:0.9s">
+    <span data-i18n="scroll_cue">Découvrir</span>
+    <div class="scroll-cue-line" aria-hidden="true"></div>
+  </div>
+</section>
+
+<!-- ══ 1 · ESPRIT JOSÉPHINE ══ -->
+<section class="panel" id="esprit" aria-label="L'esprit Joséphine" style="background:#f0ede0;">
+  <div style="position:absolute;inset:0;background:linear-gradient(160deg,rgba(96,108,56,0.06) 0%,transparent 55%);pointer-events:none;z-index:0;"></div>
+  <div class="esprit-split overlay padless" style="position:relative;z-index:1;">
+
+    <!-- ── COLONNE TEXTE ── -->
+    <div class="esprit-left" style="grid-column:1/3;">
+      <span class="eyebrow-dark rise" data-i18n="esprit_eyebrow">L'esprit Joséphine</span>
+      <h2 class="section-h2-dark rise" style="animation-delay:0.1s;" data-i18n="esprit_title">Deux regards.<br>Un territoire.</h2>
+
+      <p class="body-dark rise" style="animation-delay:0.18s;margin-bottom:0.5rem;font-size:0.88rem;line-height:1.72;" data-i18n="esprit_hook">Il y a un onglet ouvert sur votre téléphone en ce moment. Peut-être deux. Un pour les hôtels, un pour les avis. On appelle ça «&thinsp;organiser un week-end&thinsp;». On devrait appeler ça ce que c'est&nbsp;: de la charge mentale déguisée en plaisir.</p>
+
+      <p class="body-dark rise" style="animation-delay:0.26s;margin-bottom:0.5rem;font-size:0.88rem;line-height:1.72;" data-i18n="esprit_punchline">Joséphine est née de cette fatigue-là. Pas seulement pour poser les valises — mais pour oser les poser avec d'autres.</p>
+
+      <p class="body-dark rise" style="animation-delay:0.32s;margin-bottom:0;font-size:0.88rem;line-height:1.72;" data-i18n="esprit_territory">Le Sud n'est pas une destination. C'est une façon d'habiter le temps. Et ça ne se vit pas un téléphone à la main.</p>
+
+      <div class="rise" style="animation-delay:0.38s;" aria-label="Message de Justine et Naomi">
+        <p class="body-dark" style="font-size:0.82rem;line-height:1.72;" data-i18n="founders_charge">Alors on a pris la charge. Toute la charge — l'hébergement, les adresses, les trajets, les imprévus. Pour que vous arriviez sans liste, sans plan B, les mains libres et la tête enfin silencieuse.</p>
+        <p class="body-dark" style="font-size:0.82rem;line-height:1.72;margin-bottom:0;" data-i18n="founders_invite">Ce n'est pas un programme. C'est une invitation. Vous arrivez chez nous — et on s'occupe du reste.</p>
+        <p class="founders-sig" style="margin-top:0.8rem;" data-i18n="founders_sig">— Justine &amp; Naomi</p>
+      </div>
+
+      <button type="button" class="btn-line-dark rise" style="animation-delay:0.52s;color:var(--sauge);border-color:rgba(96,108,56,0.4);margin-top:1.8rem;" onclick="document.getElementById('waitlist').scrollIntoView({behavior:'smooth'})" data-i18n="esprit_cta">Être prévenue en avant-première</button>
+    </div>
+
+    <!-- ── COLONNE PHOTO ── -->
+    <div class="esprit-photo-col">
+      <img src="/fondatrices.jpg" alt="Justine Héritier et Naomi Da-Kengba-Timo, co-fondatrices de Joséphine">
+    </div>
+
+  </div>
+</section>
+
+<!-- ══ 2 · TERRITOIRE ══ -->
+<section class="panel" id="territoire" aria-label="Le territoire provençal">
+  <div class="territoire-grid overlay padless">
+    <div class="territoire-col" aria-label="Les Alpilles — oliviers centenaires et pierre blanche">
+      <div class="t-bg" role="img" aria-label="Un olivier centenaire aux racines sculptées par les siècles, sous le ciel bleu des Alpilles" style="background-image:url('/alpilles.jpg');background-position:center 40%;"></div>
+      <div class="t-vignette" aria-hidden="true"></div>
+      <div class="t-content rise">
+        <span class="t-num">01</span>
+        <h2 class="t-name">Les Alpilles</h2>
+        <p class="t-desc" data-i18n="alpilles_desc">Pierre blanche, oliviers centenaires, thym sous les sandales.<br>La lumière que Van Gogh n'oubliera jamais.</p>
+        <p class="t-places">Saint-Rémy · Arles</p>
+      </div>
+    </div>
+    <div class="territoire-col" aria-label="Le Luberon — ruelles pavées et villages de pierre blonde">
+      <div class="t-bg" role="img" aria-label="Ruelle pavée d'un village perché du Luberon, entre murs de pierre blonde et glycine en fleur" style="background-image:url('/luberon.jpg');background-position:center 50%;"></div>
+      <div class="t-vignette" aria-hidden="true"></div>
+      <div class="t-content rise" style="animation-delay:0.15s">
+        <span class="t-num">02</span>
+        <h2 class="t-name">Le Luberon</h2>
+        <p class="t-desc" data-i18n="luberon_desc">Villages perchés sur la pierre blonde, silence de midi cassé par les cigales.<br>Le temps qui a décidé de s'arrêter là.</p>
+        <p class="t-places">Gordes · Bonnieux</p>
+      </div>
+    </div>
+    <div class="territoire-col" aria-label="Le Vaucluse — eaux vives de la Sorgue et falaises calcaires">
+      <div class="t-bg" role="img" aria-label="Fontaine de pierre au bord de la Sorgue aux eaux émeraude, face aux falaises calcaires du Vaucluse" style="background-image:url('/vaucluse.jpg');background-position:center 30%;"></div>
+      <div class="t-vignette" aria-hidden="true"></div>
+      <div class="t-content rise" style="animation-delay:0.3s">
+        <span class="t-num">03</span>
+        <h2 class="t-name">Le Vaucluse</h2>
+        <p class="t-desc" data-i18n="vaucluse_desc">L'eau froide de la Sorgue, marchés où on achète sans liste.<br>Le vent frais et le parfum de garrigue.</p>
+        <p class="t-places">Avignon · L'Isle-sur-la-Sorgue</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══ 3 · UNE JOURNÉE ══ -->
+<section class="panel" id="journee" style="background:var(--creme2);" aria-label="Une journée en Provence">
+  <div style="display:flex;flex-direction:column;width:100%;height:100%;">
+
+    <div class="journee-header" style="padding:6rem 8vw 1.2rem 8vw;flex-shrink:0;">
+      <div>
+        <span class="eyebrow-dark rise" style="color:var(--sauge);" data-i18n="journee_label">Une journée en Provence</span>
+        <h2 class="section-h2-dark rise" style="animation-delay:0.1s;margin-bottom:0;" data-i18n="journee_heading">Là où le soleil<br>se lève deux fois.</h2>
+      </div>
+    </div>
+
+    <div style="display:grid;grid-template-columns:repeat(4,1fr);flex:1;min-height:0;overflow:hidden;gap:0;border-top:1px solid rgba(27,38,59,0.1);border-bottom:1px solid rgba(27,38,59,0.1);">
+      <div style="position:relative;overflow:hidden;border-right:1px solid rgba(27,38,59,0.1);">
+        <img src="/marche.jpg" alt="Étal de marché provençal : figues fraîches, tomates et ail dans les mains de Naomi" style="width:100%;height:100%;object-fit:cover;object-position:center;filter:brightness(0.92) saturate(1.05);transition:transform 1.2s ease;" onmouseover="this.style.transform='scale(1.04)'" onmouseout="this.style.transform='scale(1)'">
+        <div style="position:absolute;inset:0;background:linear-gradient(to top,rgba(27,38,59,0.12) 0%,transparent 40%);pointer-events:none;"></div>
+      </div>
+      <div style="position:relative;overflow:hidden;border-right:1px solid rgba(27,38,59,0.1);">
+        <img src="/flanerie.jpg" alt="Femme en robe fleurie flânant seule dans une ruelle pavée d'Avignon, entre hauts murs de pierre dorée" style="width:100%;height:100%;object-fit:cover;object-position:center;filter:brightness(0.92) saturate(1.05);transition:transform 1.2s ease;" onmouseover="this.style.transform='scale(1.04)'" onmouseout="this.style.transform='scale(1)'">
+        <div style="position:absolute;inset:0;background:linear-gradient(to top,rgba(27,38,59,0.12) 0%,transparent 40%);pointer-events:none;"></div>
+      </div>
+      <div style="position:relative;overflow:hidden;border-right:1px solid rgba(27,38,59,0.1);">
+        <img src="/table.jpg" alt="Déjeuner en terrasse ombragée : deux femmes attablées devant fromages et rosé dans une bastide provençale" style="width:100%;height:100%;object-fit:cover;object-position:center;filter:brightness(0.92) saturate(1.05);transition:transform 1.2s ease;" onmouseover="this.style.transform='scale(1.04)'" onmouseout="this.style.transform='scale(1)'">
+        <div style="position:absolute;inset:0;background:linear-gradient(to top,rgba(27,38,59,0.12) 0%,transparent 40%);pointer-events:none;"></div>
+      </div>
+      <div style="position:relative;overflow:hidden;">
+        <img src="/rose.jpg" alt="Deux verres de rosé posés sur un muret de pierre, dorés par le coucher de soleil sur les Alpilles" style="width:100%;height:100%;object-fit:cover;object-position:center;filter:brightness(0.92) saturate(1.05);transition:transform 1.2s ease;" onmouseover="this.style.transform='scale(1.04)'" onmouseout="this.style.transform='scale(1)'">
+        <div style="position:absolute;inset:0;background:linear-gradient(to top,rgba(27,38,59,0.12) 0%,transparent 40%);pointer-events:none;"></div>
+      </div>
+    </div>
+
+    <div style="display:grid;grid-template-columns:repeat(4,1fr);background:var(--creme);border-top:1px solid rgba(27,38,59,0.06);flex-shrink:0;">
+      <div class="rise journee-bandeau-col-first" style="animation-delay:0.2s;padding:1.4rem 1.6rem 1.4rem 8vw;border-right:1px solid rgba(27,38,59,0.06);">
+        <span style="font-size:0.48rem;letter-spacing:0.5em;text-transform:uppercase;color:var(--terre);display:block;margin-bottom:0.4rem;" data-i18n="m1_time">Tôt le matin</span>
+        <h3 style="font-family:'Playfair Display',serif;font-size:clamp(1rem,1.4vw,1.3rem);font-style:italic;color:var(--nuit);margin-bottom:0.5rem;line-height:1.15;" data-i18n="m1_title">Le Marché</h3>
+        <p style="font-size:0.72rem;line-height:1.75;color:rgba(27,38,59,0.62);font-weight:300;" data-i18n="m1_desc">Figues mûres, melon de pays, miel qui sent encore la nuit. Pas besoin de liste.</p>
+      </div>
+      <div class="rise" style="animation-delay:0.3s;padding:1.4rem 1.6rem;border-right:1px solid rgba(27,38,59,0.06);">
+        <span style="font-size:0.48rem;letter-spacing:0.5em;text-transform:uppercase;color:var(--terre);display:block;margin-bottom:0.4rem;" data-i18n="m2_time">En matinée</span>
+        <h3 style="font-family:'Playfair Display',serif;font-size:clamp(1rem,1.4vw,1.3rem);font-style:italic;color:var(--nuit);margin-bottom:0.5rem;line-height:1.15;" data-i18n="m2_title">La Flânerie</h3>
+        <p style="font-size:0.72rem;line-height:1.75;color:rgba(27,38,59,0.62);font-weight:300;" data-i18n="m2_desc">Ruelles pavées, porte entrouverte, parfum d'une cour inconnue… On s'arrête sans raison.</p>
+      </div>
+      <div class="rise" style="animation-delay:0.4s;padding:1.4rem 1.6rem;border-right:1px solid rgba(27,38,59,0.06);">
+        <span style="font-size:0.48rem;letter-spacing:0.5em;text-transform:uppercase;color:var(--terre);display:block;margin-bottom:0.4rem;" data-i18n="m3_time">Le déjeuner</span>
+        <h3 style="font-family:'Playfair Display',serif;font-size:clamp(1rem,1.4vw,1.3rem);font-style:italic;color:var(--nuit);margin-bottom:0.5rem;line-height:1.15;" data-i18n="m3_title">La Table</h3>
+        <p style="font-size:0.72rem;line-height:1.75;color:rgba(27,38,59,0.62);font-weight:300;" data-i18n="m3_desc">Sous un platane, vin frais, fromage, conversation naturelle. Personne ne regarde l'heure.</p>
+      </div>
+      <div class="rise journee-bandeau-col-last" style="animation-delay:0.5s;padding:1.4rem 8vw 1.4rem 1.6rem;">
+        <span style="font-size:0.48rem;letter-spacing:0.5em;text-transform:uppercase;color:var(--terre);display:block;margin-bottom:0.4rem;" data-i18n="m4_time">En fin de journée</span>
+        <h3 style="font-family:'Playfair Display',serif;font-size:clamp(1rem,1.4vw,1.3rem);font-style:italic;color:var(--nuit);margin-bottom:0.5rem;line-height:1.15;" data-i18n="m4_title">Le Rosé de 4h</h3>
+        <p style="font-size:0.72rem;line-height:1.75;color:rgba(27,38,59,0.62);font-weight:300;" data-i18n="m4_desc">Le soleil descend, la pierre vire à l'or sur les Alpilles. Le rosé est déjà servi — les cigales font le reste.</p>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- ══ 4 · L'EXPÉRIENCE ══ -->
+<section class="panel" id="experience" aria-label="L'expérience Joséphine" style="background:var(--nuit);">
+  <div class="overlay padless" style="display:grid;grid-template-columns:55% 45%;height:100%;width:100%;">
+
+    <div style="display:flex;flex-direction:column;justify-content:center;padding:0 8vw;position:relative;">
+      <div style="position:absolute;inset:0;background:linear-gradient(to right,rgba(27,38,59,0.9) 60%,transparent 100%);z-index:0;pointer-events:none;"></div>
+      <div style="position:relative;z-index:1;">
+        <span class="eyebrow-light rise" data-i18n="exp_eyebrow">Ce que vous rapportez</span>
+        <h2 class="section-h2-light rise" style="animation-delay:0.15s" data-i18n="exp_title">Une journée pleine<br>— et des gens à qui la raconter.</h2>
+        <p class="body-light rise" style="animation-delay:0.28s;max-width:none;" data-i18n="exp_body">On ne rentre pas les mains vides. On rentre avec des prénoms, des fous rires, une adresse griffonnée sur un bout de serviette. Avec le sentiment, rare, d'avoir été vraiment là — à plusieurs, sans l'avoir planifié. Jusqu'à la prochaine fois.</p>
+        <p class="trinity rise" style="animation-delay:0.4s;color:rgba(212,163,115,0.9);margin-top:1.5rem;" data-i18n="trinity">Flânerie.<br>Rencontres.<br>Appartenance.</p>
+      </div>
+    </div>
+
+    <div style="display:grid;grid-template-columns:1fr 1fr;grid-template-rows:1fr 1fr;gap:2px;overflow:hidden;">
+      <div style="overflow:hidden;position:relative;">
+        <img src="/saint-remy-cafe.png" alt="Trois amies autour d'un café en terrasse dans une ruelle pavée de Saint-Rémy-de-Provence" style="width:100%;height:100%;object-fit:cover;object-position:center;transition:transform 1.2s ease;" onmouseover="this.style.transform='scale(1.05)'" onmouseout="this.style.transform='scale(1)'">
+      </div>
+      <div style="overflow:hidden;position:relative;">
+        <img src="/baux-de-provence.jpg" alt="Deux personnes assises sur un rocher doré au coucher du soleil face aux Baux-de-Provence" style="width:100%;height:100%;object-fit:cover;object-position:center;transition:transform 1.2s ease;" onmouseover="this.style.transform='scale(1.05)'" onmouseout="this.style.transform='scale(1)'">
+      </div>
+      <div style="overflow:hidden;position:relative;">
+        <img src="/fondation-luma.png" alt="Groupe de femmes souriantes marchant dans le parc de la Fondation LUMA à Arles, tour Frank Gehry en arrière-plan" style="width:100%;height:100%;object-fit:cover;object-position:center;transition:transform 1.2s ease;" onmouseover="this.style.transform='scale(1.05)'" onmouseout="this.style.transform='scale(1)'">
+      </div>
+      <div style="overflow:hidden;position:relative;">
+        <img src="/avignon.png" alt="Trois jeunes femmes assises sur un muret contemplant les toits d'Avignon sous un pin parasol" style="width:100%;height:100%;object-fit:cover;object-position:center;transition:transform 1.2s ease;" onmouseover="this.style.transform='scale(1.05)'" onmouseout="this.style.transform='scale(1)'">
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- ══ 5 · LES FORMULES + LISTE D'ATTENTE ══ -->
+<section class="panel panel-nuit" id="formules" aria-label="Nos formules">
+  <div class="formules-grid">
+
+    <!-- COL GAUCHE : présentation des formules -->
+    <div class="formule-left">
+
+      <div class="formule-block">
+        <span class="formule-tag rise" data-i18n="f1_tag">En solo · Slow Travel</span>
+        <h2 class="formule-title rise" style="animation-delay:0.08s" data-i18n="f1_title">Formule Sociale</h2>
+        <p class="formule-body rise" style="animation-delay:0.16s" data-i18n="f1_body">Vous arrivez seul·e — sans avoir à gérer la logistique ni chercher une table. Huit personnes soigneusement choisies, le bon rythme, les bonnes adresses. On repart avec des prénoms, des fous rires, des adresses griffonnées sur un bout de serviette.</p>
+        <p class="formule-quote rise" style="animation-delay:0.22s" data-i18n="f1_quote">« Je venais chercher la Provence. Je rentre avec des rencontres pour la vie. »</p>
+      </div>
+
+      <div class="formule-block">
+        <span class="formule-tag rise" data-i18n="f2_tag">Entre proches · Sur mesure</span>
+        <h2 class="formule-title rise" style="animation-delay:0.08s" data-i18n="f2_title">Formule Privée</h2>
+        <p class="formule-body rise" style="animation-delay:0.16s" data-i18n="f2_body">Vos gens, votre rythme — et toute la Provence comme terrain de jeu privé. Dates libres, programme co-construit, maisons choisies avec vous. Il ne vous reste qu'à être ensemble.</p>
+        <p class="formule-quote rise" style="animation-delay:0.22s;color:var(--sauge-light);" data-i18n="f2_quote">« Le meilleur week-end qu'on n'a pas eu à planifier. »</p>
+        <div class="idea-chips" aria-label="Exemples de formats">
+          <span class="idea-chip" data-i18n="chip1">Château & dégustation</span>
+          <span class="idea-chip" data-i18n="chip2">Atelier cuisine</span>
+          <span class="idea-chip" data-i18n="chip3">Balade en mer</span>
+          <span class="idea-chip" data-i18n="chip4">Marché nocturne</span>
+          <span class="idea-chip" data-i18n="chip5">Cueillette de lavande</span>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- COL DROITE : liste d'attente -->
+    <div id="waitlist" class="formule-right" style="display:flex;flex-direction:column;justify-content:center;padding:7rem 4vw 2rem 3vw;box-sizing:border-box;border-left:1px solid rgba(254,250,224,0.08);overflow-y:auto;">
+
+      <span class="formule-tag rise" data-i18n="waitlist_eyebrow">Avant-première</span>
+      <h2 class="formule-title rise" style="font-size:clamp(1.3rem,1.7vw,2rem);animation-delay:0.08s;" data-i18n="waitlist_title">Les réservations<br>ouvrent bientôt.</h2>
+      <p class="formule-body rise" style="animation-delay:0.16s;" data-i18n="waitlist_intro">Laissez-nous votre e-mail — vous serez les premières à savoir quand les dates sont disponibles. Pas de spam, jamais. Juste une lettre, quand c'est le bon moment.</p>
+
+      <form id="waitlist-form" class="resa-form rise" style="animation-delay:0.25s;"
+        name="liste-attente" method="POST" data-netlify="true" netlify-honeypot="bot-field"
+        aria-label="Formulaire liste d'attente" onsubmit="handleWaitlist(event)">
+        <input type="hidden" name="form-name" value="liste-attente">
+        <p style="display:none" aria-hidden="true"><input name="bot-field" tabindex="-1" autocomplete="off"></p>
+
+        <div class="resa-row">
+          <div class="resa-field">
+            <label for="waitlist-prenom" class="sr-only" data-i18n="waitlist_label_prenom">Prénom</label>
+            <input class="resa-input" type="text" id="waitlist-prenom" name="prenom"
+              autocomplete="given-name" required
+              data-i18n-placeholder="waitlist_placeholder_prenom" placeholder="Prénom">
+          </div>
+          <div class="resa-field">
+            <label for="waitlist-email" class="sr-only" data-i18n="waitlist_label_email">E-mail</label>
+            <input class="resa-input" type="email" id="waitlist-email" name="email"
+              autocomplete="email" required
+              data-i18n-placeholder="waitlist_placeholder_email" placeholder="E-mail">
+          </div>
+        </div>
+
+        <div class="resa-row" style="margin-top:0.6rem;">
+          <div class="resa-field">
+            <label for="waitlist-formule" class="sr-only" data-i18n="waitlist_label_formule">Intérêt</label>
+            <select class="resa-input resa-select" id="waitlist-formule" name="formule" required>
+              <option value="" disabled selected data-i18n="waitlist_select_default">Je suis intéressé·e par…</option>
+              <option value="sociale" data-i18n="waitlist_select_sociale">La Formule Sociale</option>
+              <option value="privee" data-i18n="waitlist_select_privee">La Formule Privée</option>
+              <option value="les_deux" data-i18n="waitlist_select_les_deux">Les deux, selon l'occasion</option>
+            </select>
+          </div>
+        </div>
+
+        <div style="margin-top:0.8rem;display:flex;align-items:flex-start;gap:0.75rem;">
+          <input type="checkbox" id="waitlist-newsletter" name="newsletter" value="oui"
+            style="margin-top:0.18rem;flex-shrink:0;width:14px;height:14px;accent-color:var(--ocre);cursor:pointer;">
+          <label for="waitlist-newsletter"
+            style="font-size:0.72rem;font-weight:300;line-height:1.6;color:rgba(254,250,224,0.5);cursor:pointer;"
+            data-i18n="waitlist_newsletter_label">
+            J'accepte également de recevoir Les Lettres de Joséphine — adresses secrètes, portraits d'artisans, art de ralentir. Un e-mail par mois, au maximum.
+          </label>
+        </div>
+
+        <button type="submit" class="resa-btn" data-i18n="waitlist_cta">Je veux être prévenue</button>
+        <p class="resa-note" data-i18n="waitlist_note">Aucun engagement · Aucun paiement · Vos données ne sont jamais partagées</p>
+      </form>
+
+      <div id="waitlist-confirm" style="display:none;padding:1.5rem;background:rgba(96,108,56,0.12);border:1px solid rgba(96,108,56,0.25);margin-top:1rem;"
+        role="alert" aria-live="polite">
+        <p style="font-size:0.82rem;font-weight:300;line-height:1.7;color:rgba(254,250,224,0.78);" data-i18n="waitlist_confirm">
+          C'est noté — merci. Vous serez parmi les premières à recevoir nos dates. En attendant, les Lettres de Joséphine vous attendent.
+        </p>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ══ 6 · LES LETTRES ══ -->
+<section class="panel" id="lettres" aria-label="Newsletter" style="background:#3a4220;">
+  <div style="position:absolute;inset:0;background:radial-gradient(ellipse at 60% 50%,rgba(96,108,56,0.45) 0%,transparent 70%);z-index:1;pointer-events:none;"></div>
+  <div class="overlay center" style="position:relative;z-index:2;">
+    <h2 class="rise" style="font-family:'Playfair Display',serif;font-size:clamp(3.5rem,9vw,8.5rem);font-style:italic;color:var(--creme);margin-bottom:1.5rem;line-height:0.95;" data-i18n="lettres_title">Les Lettres.</h2>
+    <p class="rise cormnt" style="max-width:34rem;font-size:clamp(1rem,2vw,1.35rem);font-weight:300;font-style:italic;color:rgba(254,250,224,0.75);margin-bottom:0.8rem;line-height:1.75;animation-delay:0.15s;" data-i18n="lettres_sub">Une fois par mois : des adresses que Justine & Naomi n'ont pas encore publiées, des dates en avant-première, des récits du terrain.</p>
+    <p class="rise" style="max-width:28rem;font-size:0.68rem;letter-spacing:0.15em;text-transform:uppercase;color:rgba(254,250,224,0.62);margin-bottom:2.5rem;line-height:2;animation-delay:0.25s;" data-i18n="lettres_desc">Lavande, soleil &amp; adresses secrètes — une fois par mois.</p>
+    <form class="newsletter-form rise" style="animation-delay:0.38s;" name="newsletter" method="POST" data-netlify="true" netlify-honeypot="bot-field" novalidate aria-label="Inscription à la newsletter" onsubmit="handleNewsletterSubmit(event)">
+      <input type="hidden" name="form-name" value="newsletter">
+      <label for="newsletter-email" class="sr-only" data-i18n="email_label">Votre adresse email</label>
+      <input id="newsletter-email" type="email" name="email" autocomplete="email" required aria-required="true" data-i18n-placeholder="email_placeholder" placeholder="Votre email" style="background:rgba(254,250,224,0.08);border-color:rgba(254,250,224,0.2);color:var(--creme);">
+      <button type="submit" data-i18n="lettres_btn" style="background:var(--ocre);border-color:var(--ocre);color:#1a1a0a;">Recevoir les lettres</button>
+    </form>
+  </div>
+</section>
+
+<!-- ══ 7 · CONTACT ══ -->
+<section class="panel panel-nuit" id="contact" aria-label="Contact">
+  <div class="overlay">
+    <div class="exp-grid">
+      <div>
+        <h2 class="section-h2-light rise" data-i18n="contact_title">Discutons.</h2>
+        <p class="rise cormnt" style="font-style:italic;font-size:1.1rem;font-weight:300;color:rgba(254,250,224,0.58);margin-bottom:2.5rem;line-height:1.75;animation-delay:0.15s;" data-i18n="contact_sub">Parce que chaque aventure<br>commence par un premier mot.</p>
+        <a href="mailto:bonjour@josephine-provence.fr" class="rise" style="font-family:'Playfair Display',serif;font-style:italic;font-size:1rem;border-bottom:1px solid rgba(254,250,224,0.12);padding-bottom:0.8rem;color:rgba(254,250,224,0.65);text-decoration:none;display:inline-block;animation-delay:0.28s;transition:color 0.3s;">
+          bonjour@josephine-provence.fr
+        </a>
+      </div>
+      <form class="rise" style="display:flex;flex-direction:column;gap:1.8rem;animation-delay:0.2s;"
+          name="contact" method="POST" data-netlify="true" netlify-honeypot="bot-field"
+          aria-label="Formulaire de contact" onsubmit="handleContact(event)">
+        <input type="hidden" name="form-name" value="contact">
+        <div style="display:grid;grid-template-columns:1fr 1fr;gap:1.2rem;">
+          <input class="contact-input" type="text" name="prenom" data-i18n-placeholder="prenom" placeholder="Prénom" aria-label="Prénom">
+          <input class="contact-input" type="text" name="nom" data-i18n-placeholder="nom" placeholder="Nom" aria-label="Nom">
+        </div>
+        <input class="contact-input" id="contact-email" type="email" name="email" required aria-required="true" aria-label="Votre adresse email" data-i18n-placeholder="email" placeholder="Email">
+        <textarea id="contact-message" aria-label="Votre message" class="contact-input" name="message" rows="3" style="resize:none;" data-i18n-placeholder="message" placeholder="Quelle expérience imaginez-vous ?"></textarea>
+        <button type="submit" class="btn-submit" data-i18n="send_btn">Envoyer ce premier mot</button>
+      </form>
+    </div>
+
+  </div>
+</section>
+
+<!-- ══ 8 · FOOTER ══ -->
+<section class="panel panel-nuit" id="footer-panel" aria-label="Pied de page" role="contentinfo">
+  <div style="width:100%;height:100%;display:flex;flex-direction:column;justify-content:center;padding:0 8vw;box-sizing:border-box;">
+
+    <!-- Logo -->
+    <div style="margin-bottom:2.5rem;">
+      <img src="/logo.svg" alt="Joséphine" style="height:34px;filter:brightness(0) invert(1);opacity:0.7;">
+    </div>
+
+    <!-- 4 colonnes -->
+    <div style="display:grid;grid-template-columns:1fr 1fr 1.8fr 1fr;gap:4rem;align-items:start;border-top:1px solid rgba(254,250,224,0.07);padding-top:2.5rem;">
+
+      <!-- Col 1 · Légal -->
+      <div>
+        <span style="font-size:0.46rem;letter-spacing:0.5em;text-transform:uppercase;color:rgba(254,250,224,0.28);display:block;margin-bottom:1.2rem;" data-i18n="footer_col_legal">Légal</span>
+        <nav aria-label="Liens légaux" style="display:flex;flex-direction:column;gap:0.8rem;">
+          <a href="/mentions-legales.html" style="font-family:'Cormorant Garamond',serif;font-size:1rem;font-weight:300;color:rgba(254,250,224,0.6);text-decoration:none;transition:color 0.2s;" onmouseover="this.style.color='var(--ocre)'" onmouseout="this.style.color='rgba(254,250,224,0.6)'" data-i18n="mentions">Mentions légales</a>
+          <a href="/confidentialite.html" style="font-family:'Cormorant Garamond',serif;font-size:1rem;font-weight:300;color:rgba(254,250,224,0.6);text-decoration:none;transition:color 0.2s;" onmouseover="this.style.color='var(--ocre)'" onmouseout="this.style.color='rgba(254,250,224,0.6)'" data-i18n="confidentialite">Confidentialité</a>
+          <a href="/mentions-legales.html#accessibilite" style="font-family:'Cormorant Garamond',serif;font-size:1rem;font-weight:300;color:rgba(254,250,224,0.6);text-decoration:none;transition:color 0.2s;" onmouseover="this.style.color='var(--ocre)'" onmouseout="this.style.color='rgba(254,250,224,0.6)'" data-i18n="footer_a11y">Accessibilité</a>
+        </nav>
+      </div>
+
+      <!-- Col 2 · Explorer -->
+      <div>
+        <span style="font-size:0.46rem;letter-spacing:0.5em;text-transform:uppercase;color:rgba(254,250,224,0.28);display:block;margin-bottom:1.2rem;" data-i18n="footer_col_explore">Explorer</span>
+        <nav aria-label="Navigation du site" style="display:flex;flex-direction:column;gap:0.8rem;">
+          <a href="#esprit" style="font-family:'Cormorant Garamond',serif;font-size:1rem;font-weight:300;color:rgba(254,250,224,0.6);text-decoration:none;transition:color 0.2s;" onmouseover="this.style.color='var(--ocre)'" onmouseout="this.style.color='rgba(254,250,224,0.6)'" onclick="document.getElementById('esprit').scrollIntoView({behavior:'smooth'});return false;" data-i18n="footer_link_esprit">L'Esprit Joséphine</a>
+          <a href="#territoire" style="font-family:'Cormorant Garamond',serif;font-size:1rem;font-weight:300;color:rgba(254,250,224,0.6);text-decoration:none;transition:color 0.2s;" onmouseover="this.style.color='var(--ocre)'" onmouseout="this.style.color='rgba(254,250,224,0.6)'" onclick="document.getElementById('territoire').scrollIntoView({behavior:'smooth'});return false;" data-i18n="footer_link_territoire">Le Territoire</a>
+          <a href="#formules" style="font-family:'Cormorant Garamond',serif;font-size:1rem;font-weight:300;color:rgba(254,250,224,0.6);text-decoration:none;transition:color 0.2s;" onmouseover="this.style.color='var(--ocre)'" onmouseout="this.style.color='rgba(254,250,224,0.6)'" onclick="document.getElementById('waitlist').scrollIntoView({behavior:'smooth'});return false;" data-i18n="footer_link_formules">Les Formules</a>
+          <a href="#contact" style="font-family:'Cormorant Garamond',serif;font-size:1rem;font-weight:300;color:rgba(254,250,224,0.6);text-decoration:none;transition:color 0.2s;" onmouseover="this.style.color='var(--ocre)'" onmouseout="this.style.color='rgba(254,250,224,0.6)'" onclick="document.getElementById('contact').scrollIntoView({behavior:'smooth'});return false;" data-i18n="footer_link_contact">Contact</a>
+        </nav>
+      </div>
+
+      <!-- Col 3 · Les Lettres -->
+      <div>
+        <span style="font-size:0.46rem;letter-spacing:0.5em;text-transform:uppercase;color:rgba(254,250,224,0.28);display:block;margin-bottom:1.2rem;" data-i18n="footer_col_lettres">Les Lettres de Joséphine</span>
+        <p style="font-size:0.8rem;font-weight:300;line-height:1.72;color:rgba(254,250,224,0.45);margin-bottom:1.2rem;max-width:28ch;" data-i18n="footer_lettres_desc">Une fois par mois : adresses secrètes, dates en avant-première, récits du terrain.</p>
+        <form name="newsletter-footer" method="POST" data-netlify="true" netlify-honeypot="bot-field"
+          style="display:flex;max-width:22rem;" aria-label="Inscription newsletter footer"
+          onsubmit="handleFooterNewsletter(event)">
+          <input type="hidden" name="form-name" value="newsletter-footer">
+          <input type="hidden" name="bot-field" style="display:none">
+          <label for="footer-email" class="sr-only" data-i18n="email_label">Votre adresse email</label>
+          <input id="footer-email" type="email" name="email" required
+            data-i18n-placeholder="email_placeholder" placeholder="Votre email"
+            style="flex:1;background:rgba(254,250,224,0.05);border:1px solid rgba(254,250,224,0.12);border-right:none;padding:0.75rem 1rem;font-size:0.65rem;letter-spacing:0.12em;text-transform:uppercase;color:var(--creme);outline:none;font-family:'Inter',sans-serif;transition:border-color 0.3s;"
+            onfocus="this.style.borderColor='rgba(212,163,115,0.4)'" onblur="this.style.borderColor='rgba(254,250,224,0.12)'">
+          <button type="submit"
+            style="background:transparent;border:1px solid rgba(254,250,224,0.12);padding:0.75rem 1.1rem;color:rgba(254,250,224,0.5);font-size:1rem;cursor:pointer;transition:background 0.25s,color 0.25s;font-family:'Cormorant Garamond',serif;"
+            onmouseover="this.style.background='rgba(212,163,115,0.1)';this.style.color='var(--ocre)'" onmouseout="this.style.background='transparent';this.style.color='rgba(254,250,224,0.5)'"
+            aria-label="S'inscrire">→</button>
+        </form>
+        <div id="footer-nl-confirm" style="display:none;font-size:0.65rem;letter-spacing:0.15em;text-transform:uppercase;color:var(--sauge-light);margin-top:0.8rem;" data-i18n="footer_nl_confirm">✓ À bientôt dans votre boîte mail.</div>
+      </div>
+
+      <!-- Col 4 · Suivre -->
+      <div>
+        <span style="font-size:0.46rem;letter-spacing:0.5em;text-transform:uppercase;color:rgba(254,250,224,0.28);display:block;margin-bottom:1.2rem;" data-i18n="footer_col_follow">Suivre</span>
+        <a href="https://www.instagram.com/josephine.provence" target="_blank" rel="noopener"
+          style="display:flex;align-items:center;gap:0.6rem;font-family:'Cormorant Garamond',serif;font-size:1rem;font-weight:300;color:rgba(254,250,224,0.6);text-decoration:none;transition:color 0.2s;margin-bottom:1.5rem;"
+          onmouseover="this.style.color='var(--ocre)'" onmouseout="this.style.color='rgba(254,250,224,0.6)'">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/></svg>
+          @josephine.provence
+        </a>
+        <a href="https://www.chapka.fr" target="_blank" rel="noopener"
+          style="font-size:0.6rem;letter-spacing:0.15em;text-transform:uppercase;color:rgba(254,250,224,0.25);text-decoration:none;line-height:1.7;transition:color 0.2s;"
+          onmouseover="this.style.color='rgba(254,250,224,0.5)'" onmouseout="this.style.color='rgba(254,250,224,0.25)'"
+          data-i18n="footer_insurance">Assurance voyage recommandée</a>
+      </div>
+
+    </div>
+
+    <!-- Bas de page -->
+    <div style="border-top:1px solid rgba(254,250,224,0.06);margin-top:2.5rem;padding-top:1.4rem;display:flex;justify-content:space-between;align-items:center;">
+      <span style="font-size:0.46rem;letter-spacing:0.35em;text-transform:uppercase;color:rgba(254,250,224,0.2);" data-i18n="footer_copy">© 2026 Joséphine SAS — Provence · Tous droits réservés</span>
+      <span style="font-size:0.46rem;letter-spacing:0.35em;text-transform:uppercase;color:rgba(254,250,224,0.15);">josephine-provence.fr</span>
+    </div>
+
+  </div>
+
+  <!-- Mobile footer -->
+  <style>
+    @media(max-width:768px){
+      #footer-panel > div { padding: 4rem 1.8rem 3rem; justify-content: flex-start; }
+      #footer-panel > div > div:nth-child(2) { grid-template-columns: 1fr 1fr; gap: 2.5rem; }
+    }
+    @media(max-width:480px){
+      #footer-panel > div > div:nth-child(2) { grid-template-columns: 1fr; }
+    }
+  </style>
+
+</section>
+
+</main>
+
+<script>
+// ─── NAV ───
+const nav = document.getElementById('nav');
+const scroller = document.getElementById('scroller');
+const isMobile = () => window.innerWidth <= 768;
+
+function isDarkSection() {
+  const scrollY = isMobile() ? window.scrollY : scroller.scrollTop;
+  const vh = window.innerHeight;
+  const idx = Math.round(scrollY / vh);
+  // 0=hero(dark), 1=esprit(light), 2=territoire(dark), 3=journee(light), 4=experience(dark), 5=formules(dark), 6=lettres(dark), 7=contact(dark), 8=footer(dark)
+  return [0, 2, 4, 5, 6, 7, 8].includes(idx);
+}
+
+function updateNav() {
+  const scrollY = isMobile() ? window.scrollY : scroller.scrollTop;
+  const scrolled = scrollY > 60;
+  nav.classList.toggle('scrolled', scrolled);
+  const img = document.getElementById('nav-logo-img');
+  const dark = isDarkSection();
+  img.style.filter = dark
+    ? 'brightness(0) invert(1)'
+    : 'brightness(0) saturate(100%) invert(16%) sepia(36%) saturate(630%) hue-rotate(183deg) brightness(88%) contrast(92%)';
+  const langBtns = document.querySelectorAll('.lang-toggle button');
+  const langSep  = document.querySelector('.lang-toggle span');
+  const navColor = dark && !scrolled ? 'rgba(254,250,224,0.85)' : 'var(--nuit)';
+  langBtns.forEach(btn => { btn.style.color = navColor; });
+  if (langSep) langSep.style.color = navColor;
+}
+
+scroller.addEventListener('scroll', updateNav);
+window.addEventListener('scroll', updateNav);
+
+// ─── WAITLIST FORM ───
+function handleWaitlist(e) {
+  e.preventDefault();
+  const form = document.getElementById('waitlist-form');
+  const confirm = document.getElementById('waitlist-confirm');
+  const btn = form.querySelector('button[type=submit]');
+  const prenom = document.getElementById('waitlist-prenom').value.trim();
+  const email  = document.getElementById('waitlist-email').value.trim();
+  const formule = document.getElementById('waitlist-formule').value;
+  if (!prenom || !email.includes('@') || !formule) return;
+  btn.textContent = '…'; btn.disabled = true;
+  const newsletter = document.getElementById('waitlist-newsletter').checked ? 'oui' : 'non';
+  const enc = d => Object.keys(d).map(k => encodeURIComponent(k) + '=' + encodeURIComponent(d[k])).join('&');
+  fetch('/', {
+    method: 'POST',
+    headers: {'Content-Type': 'application/x-www-form-urlencoded'},
+    body: enc({'form-name': 'liste-attente', prenom, email, formule, newsletter})
+  })
+  .then(() => {
+    form.style.opacity = '0'; form.style.transition = 'opacity 0.4s';
+    setTimeout(() => { form.style.display = 'none'; confirm.style.display = 'block'; confirm.focus(); }, 400);
+  })
+  .catch(() => { form.submit(); });
+}
+
+// ─── NEWSLETTER FORM ───
+function handleNewsletterSubmit(e) {
+  e.preventDefault();
+  const inp = document.getElementById('newsletter-email');
+  const btn = e.target.querySelector('button[type=submit]');
+  if (!inp.value || !inp.value.includes('@')) return;
+  const enc = d => Object.keys(d).map(k => encodeURIComponent(k) + '=' + encodeURIComponent(d[k])).join('&');
+  fetch('/', { method: 'POST', headers: {'Content-Type': 'application/x-www-form-urlencoded'},
+    body: enc({'form-name': 'newsletter', email: inp.value})
+  }).then(() => { btn.textContent = '✓'; btn.disabled = true; })
+    .catch(() => { btn.textContent = '✓'; btn.disabled = true; });
+}
+
+// ─── CONTACT FORM ───
+function handleContact(e) {
+  e.preventDefault();
+  const form = e.target;
+  const email = document.getElementById('contact-email');
+  const msg   = document.getElementById('contact-message');
+  if (!email.value.includes('@')) { email.focus(); return; }
+  const btn = form.querySelector('button[type=submit]');
+  btn.textContent = '…'; btn.disabled = true;
+  const enc = d => Object.keys(d).map(k => encodeURIComponent(k)+'='+encodeURIComponent(d[k])).join('&');
+  fetch('/', { method: 'POST', headers: {'Content-Type':'application/x-www-form-urlencoded'},
+    body: enc({'form-name':'contact', email:email.value, message:msg.value})
+  }).then(() => {
+    form.style.opacity = '0'; form.style.transition = 'opacity 0.4s';
+    setTimeout(() => {
+      const p = document.createElement('p');
+      p.style.cssText = "font-family:'Playfair Display',serif;font-style:italic;font-size:1.1rem;color:var(--ocre);";
+      p.textContent = currentLang === 'en' ? 'Message sent. See you soon.' : 'Message envoyé. À bientôt.';
+      form.innerHTML = ''; form.appendChild(p); form.style.opacity='1';
+    }, 400);
+  }).catch(() => { btn.textContent = currentLang==='en'?'Send the first word':'Envoyer ce premier mot'; btn.disabled=false; });
+}
+
+// ─── FOOTER NEWSLETTER ───
+function handleFooterNewsletter(e) {
+  e.preventDefault();
+  const inp = document.getElementById('footer-email');
+  const btn = e.target.querySelector('button[type=submit]');
+  if (!inp.value || !inp.value.includes('@')) return;
+  btn.textContent = '✓'; btn.disabled = true;
+  const enc = d => Object.keys(d).map(k => encodeURIComponent(k) + '=' + encodeURIComponent(d[k])).join('&');
+  fetch('/', { method:'POST', headers:{'Content-Type':'application/x-www-form-urlencoded'},
+    body: enc({'form-name':'newsletter-footer', email:inp.value})
+  }).finally(() => {
+    inp.style.display = 'none'; btn.style.display = 'none';
+    document.getElementById('footer-nl-confirm').style.display = 'block';
+  });
+}
+
+
+const translations = {
+  fr: {
+    nav_cta:'Avant-première',
+    hero_eyebrow:'Slow Travel · Alpilles · Luberon · Vaucluse',
+    hero_sub:'Partir seul·e ne veut pas dire être seul·e.',
+    scroll_cue:'Découvrir',
+    esprit_eyebrow:"L'esprit Joséphine",
+    esprit_title:'Deux regards.<br>Un territoire.',
+    esprit_hook:"Il y a un onglet ouvert sur votre téléphone en ce moment. Peut-être deux. Un pour les hôtels, un pour les avis. On appelle ça «\u202Forganiser un week-end\u202F». On devrait appeler ça ce que c'est\u00A0: de la charge mentale déguisée en plaisir.",
+    esprit_punchline:"Joséphine est née de cette fatigue-là. Pas seulement pour poser les valises — mais pour oser les poser avec d'autres.",
+    esprit_territory:"Le Sud n'est pas une destination. C'est une façon d'habiter le temps. Et ça ne se vit pas un téléphone à la main.",
+    esprit_cta:'Être prévenue en avant-première',
+    founders_charge:"Alors on a pris la charge. Toute la charge — l'hébergement, les adresses, les trajets, les imprévus. Pour que vous arriviez sans liste, sans plan B, les mains libres et la tête enfin silencieuse.",
+    founders_invite:"Ce n'est pas un programme. C'est une invitation. Vous arrivez chez nous — et on s'occupe du reste.",
+    founders_sig:'— Justine & Naomi, co-fondatrices',
+    alpilles_desc:"Pierre blanche, oliviers centenaires, thym sous les sandales.<br>La lumière que Van Gogh n'oubliera jamais.",
+    luberon_desc:"Villages perchés sur la pierre blonde, silence de midi cassé par les cigales.<br>Le temps qui a décidé de s'arrêter là.",
+    vaucluse_desc:"L'eau froide de la Sorgue, marchés où on achète sans liste.<br>Le vent frais et le parfum de garrigue.",
+    journee_label:'Une journée en Provence',
+    journee_heading:'Là où le soleil<br>se lève deux fois.',
+    m1_time:'Tôt le matin', m1_title:'Le Marché', m1_desc:'Figues mûres, melon de pays, miel qui sent encore la nuit. Pas besoin de liste.',
+    m2_time:'En matinée', m2_title:'La Flânerie', m2_desc:"Ruelles pavées, porte entrouverte, parfum d'une cour inconnue… On s'arrête sans raison.",
+    m3_time:'Le déjeuner', m3_title:'La Table', m3_desc:"Sous un platane, vin frais, fromage, conversation naturelle. Personne ne regarde l'heure.",
+    m4_time:'En fin de journée', m4_title:'Le Rosé de 4h', m4_desc:"Le soleil descend, la pierre vire à l'or sur les Alpilles. Le rosé est déjà servi — les cigales font le reste.",
+    exp_eyebrow:'Ce que vous rapportez',
+    exp_title:'Une journée pleine<br>— et des gens à qui la raconter.',
+    exp_body:"On ne rentre pas les mains vides. On rentre avec des prénoms, des fous rires, une adresse griffonnée sur un bout de serviette. Avec le sentiment, rare, d'avoir été vraiment là — à plusieurs, sans l'avoir planifié. Jusqu'à la prochaine fois.",
+    trinity:'Flânerie.<br>Rencontres.<br>Appartenance.',
+    f1_tag:'En solo · Slow Travel', f1_title:'Formule Sociale',
+    f1_body:"Vous arrivez seul·e — sans avoir à gérer la logistique ni chercher une table. Huit personnes soigneusement choisies, le bon rythme, les bonnes adresses. On repart avec des prénoms, des fous rires, des adresses griffonnées sur un bout de serviette.",
+    f1_quote:"« Je venais chercher la Provence. Je rentre avec des rencontres pour la vie. »",
+    f2_tag:'Entre proches · Sur mesure', f2_title:'Formule Privée',
+    f2_body:"Vos gens, votre rythme — et toute la Provence comme terrain de jeu privé. Dates libres, programme co-construit, maisons choisies avec vous. Il ne vous reste qu'à être ensemble.",
+    f2_quote:"« Le meilleur week-end qu'on n'a pas eu à planifier. »",
+    chip1:'Château & dégustation', chip2:'Atelier cuisine', chip3:'Balade en mer', chip4:'Marché nocturne', chip5:'Cueillette de lavande',
+    waitlist_eyebrow:'Avant-première',
+    waitlist_title:'Les réservations<br>ouvrent bientôt.',
+    waitlist_intro:"Laissez-nous votre e-mail — vous serez les premières à savoir quand les dates sont disponibles. Pas de spam, jamais. Juste une lettre, quand c'est le bon moment.",
+    waitlist_label_prenom:'Prénom', waitlist_placeholder_prenom:'Prénom',
+    waitlist_label_email:'E-mail', waitlist_placeholder_email:'E-mail',
+    waitlist_label_formule:'Je suis intéressé·e par',
+    waitlist_select_default:'Je suis intéressé·e par…',
+    waitlist_select_sociale:'La Formule Sociale',
+    waitlist_select_privee:'La Formule Privée',
+    waitlist_select_les_deux:"Les deux, selon l'occasion",
+    waitlist_newsletter_label:"J'accepte également de recevoir Les Lettres de Joséphine — adresses secrètes, portraits d'artisans, art de ralentir. Un e-mail par mois, au maximum.",
+    waitlist_cta:'Je veux être prévenue',
+    waitlist_note:'Aucun engagement · Aucun paiement · Vos données ne sont jamais partagées',
+    waitlist_confirm:"C'est noté — merci. Vous serez parmi les premières à recevoir nos dates. En attendant, les Lettres de Joséphine vous attendent.",
+    lettres_title:'Les Lettres.',
+    lettres_sub:"Une fois par mois : des adresses que Justine & Naomi n'ont pas encore publiées, des dates en avant-première, des récits du terrain.",
+    lettres_desc:'Lavande, soleil & adresses secrètes — une fois par mois.',
+    lettres_btn:'Recevoir les lettres',
+    email_label:'Votre adresse email', email_placeholder:'Votre email',
+    contact_title:'Discutons.',
+    contact_sub:'Parce que chaque aventure<br>commence par un premier mot.',
+    send_btn:'Envoyer ce premier mot',
+    prenom:'Prénom', nom:'Nom', email:'Email', message:'Quelle expérience imaginez-vous ?',
+    mentions:'Mentions légales', confidentialite:'Confidentialité',
+    footer_insurance:'Assurance voyage recommandée',
+    footer_col_legal:'Légal', footer_col_explore:'Explorer',
+    footer_col_lettres:'Les Lettres de Joséphine', footer_col_follow:'Suivre',
+    footer_lettres_desc:'Une fois par mois : adresses secrètes, dates en avant-première, récits du terrain.',
+    footer_nl_confirm:'✓ À bientôt dans votre boîte mail.',
+    footer_copy:'© 2026 Joséphine SAS — Provence · Tous droits réservés',
+    footer_a11y:'Accessibilité',
+    footer_link_esprit:"L'Esprit Joséphine", footer_link_territoire:'Le Territoire',
+    footer_link_formules:'Les Formules', footer_link_contact:'Contact',
+  },
+
+  en: {
+    nav_cta:'Early access',
+    hero_eyebrow:'Slow Travel · Alpilles · Luberon · Vaucluse',
+    hero_sub:"Traveling solo doesn't mean being alone.",
+    scroll_cue:'Discover',
+    esprit_eyebrow:'The Joséphine spirit',
+    esprit_title:'Two women.<br>One territory.',
+    esprit_hook:"There's a tab open on your phone right now. Maybe two. One for hotels, one for reviews. We call that \"planning a weekend\". We should call it what it is\u00A0: unpaid mental load disguised as pleasure.",
+    esprit_punchline:"Joséphine was born from that exhaustion. Not just to set down your bags — but to dare set them down with others.",
+    esprit_territory:"The South isn't a destination. It's a way of inhabiting time. And it doesn't work with a phone in your hand.",
+    esprit_cta:'Join the early access list',
+    founders_charge:"So we took on the load. All of it — accommodation, addresses, transfers, the unexpected. So you arrive without a list, without a plan B, hands free and mind finally quiet.",
+    founders_invite:"This isn't a programme. It's an invitation. You arrive at ours — and we take care of the rest.",
+    founders_sig:'— Justine & Naomi, co-founders',
+    alpilles_desc:"White limestone ridges, ancient olive trees, thyme underfoot.<br>The light Van Gogh never forgot.",
+    luberon_desc:"Hilltop villages in blonde stone, noon silence broken by cicadas.<br>Time that decided to stop here.",
+    vaucluse_desc:"Cold water of the Sorgue, markets where you buy without a list.<br>Warm wind and the scent of wild herbs.",
+    journee_label:'A day in Provence',
+    journee_heading:'Where the sun<br>rises twice.',
+    m1_time:'Early morning', m1_title:'The Market', m1_desc:'Ripe figs, local melon, honey that still smells of night. No list needed.',
+    m2_time:'Mid-morning', m2_title:'The Wander', m2_desc:"Cobblestones, a half-open door, the scent of an unknown courtyard… You stop for no reason.",
+    m3_time:'Lunch', m3_title:'The Table', m3_desc:'Under a plane tree, cold white wine, cheese, natural conversation. Nobody checks the time.',
+    m4_time:'Late afternoon', m4_title:'The 4pm Rosé', m4_desc:"The sun drops, the stone turns gold across the Alpilles. The rosé is already poured — the cicadas do the rest.",
+    exp_eyebrow:'What you bring back',
+    exp_title:'A day full to the brim<br>— and people to tell it to.',
+    exp_body:"You don't come back empty-handed. You come back with first names, laughter, an address scribbled on a napkin. With the rare feeling of having truly been present — together, without having planned it. Until next time.",
+    trinity:'Wandering.<br>Connections.<br>Belonging.',
+    f1_tag:'Solo · Slow Travel', f1_title:'Social Weekend',
+    f1_body:"You arrive alone — without managing logistics or finding a table. Eight carefully chosen people, the right pace, the right addresses. You leave with first names, laughter, addresses scribbled on a napkin.",
+    f1_quote:'"I came looking for Provence. I\'m leaving with friendships for life."',
+    f2_tag:'With loved ones · Bespoke', f2_title:'Private Weekend',
+    f2_body:"Your people, your pace — and all of Provence as your private playground. Dates set together, programme co-built, houses chosen with you. All you have to do is be together.",
+    f2_quote:'"The best weekend we never had to plan."',
+    chip1:'Château & tasting', chip2:'Cooking workshop', chip3:'Sailing from Cassis', chip4:'Night market', chip5:'Lavender harvest',
+    waitlist_eyebrow:'Early access',
+    waitlist_title:'Reservations<br>opening soon.',
+    waitlist_intro:"Leave us your email — you'll be among the first to know when dates are available. No spam, ever. Just a letter, at the right moment.",
+    waitlist_label_prenom:'First name', waitlist_placeholder_prenom:'First name',
+    waitlist_label_email:'Email', waitlist_placeholder_email:'Email',
+    waitlist_label_formule:"I'm interested in",
+    waitlist_select_default:"I'm interested in…",
+    waitlist_select_sociale:'The Social Weekend',
+    waitlist_select_privee:'The Private Weekend',
+    waitlist_select_les_deux:'Both, depending on the occasion',
+    waitlist_newsletter_label:"I'd also like to receive Les Lettres de Joséphine — secret addresses, artisan portraits, the art of slowing down. One email a month, at most.",
+    waitlist_cta:'Notify me when dates open',
+    waitlist_note:'No commitment · No payment · Your data is never shared',
+    waitlist_confirm:"All noted — thank you. You'll be among the first to hear from us. In the meantime, Les Lettres de Joséphine are waiting for you.",
+    lettres_title:'The Letters.',
+    lettres_sub:"Once a month: addresses Justine & Naomi haven't published yet, early-access dates, dispatches from the field.",
+    lettres_desc:'Lavender, sunshine & secret addresses — once a month.',
+    lettres_btn:'Receive the letters',
+    email_label:'Your email address', email_placeholder:'Your email',
+    contact_title:"Let's talk.",
+    contact_sub:'Because every great journey<br>begins with a first word.',
+    send_btn:'Send the first word',
+    prenom:'First name', nom:'Last name', email:'Email', message:'What experience are you imagining?',
+    mentions:'Legal notice', confidentialite:'Privacy policy',
+    footer_insurance:'Recommended travel insurance',
+    footer_col_legal:'Legal', footer_col_explore:'Explore',
+    footer_col_lettres:'Les Lettres de Joséphine', footer_col_follow:'Follow',
+    footer_lettres_desc:'Once a month: secret addresses, early-access dates, dispatches from the field.',
+    footer_nl_confirm:'✓ See you in your inbox.',
+    footer_copy:'© 2026 Joséphine SAS — Provence · All rights reserved',
+    footer_a11y:'Accessibility',
+    footer_link_esprit:'The Joséphine Spirit', footer_link_territoire:'The Territory',
+    footer_link_formules:'The Weekends', footer_link_contact:'Contact',
+  }
+};
+
+let currentLang = 'en';
+
+async function detectLang() {
+  const stored = localStorage.getItem('josLang');
+  if (stored) { setLang(stored); return; }
+  try {
+    const r = await fetch('https://ipapi.co/json/');
+    const d = await r.json();
+    const frCountries = ['FR','BE','CH','LU','MC','SN','CI','MA','TN','DZ','CM','GA','MG','ML','BJ','BF','TG','NE'];
+    setLang(frCountries.includes(d.country_code) ? 'fr' : 'en');
+  } catch {
+    setLang('en');
+  }
+}
+
+function setLang(lang) {
+  localStorage.setItem('josLang', lang);
+  currentLang = lang;
+  document.documentElement.lang = lang;
+  document.getElementById('btn-lang-fr').classList.toggle('active', lang === 'fr');
+  document.getElementById('btn-lang-en').classList.toggle('active', lang === 'en');
+  document.getElementById('btn-lang-fr').setAttribute('aria-pressed', lang === 'fr' ? 'true' : 'false');
+  document.getElementById('btn-lang-en').setAttribute('aria-pressed', lang === 'en' ? 'true' : 'false');
+  const t = translations[lang];
+  document.querySelectorAll('[data-i18n]').forEach(el => {
+    const key = el.getAttribute('data-i18n');
+    if (t[key] !== undefined) el.innerHTML = t[key];
+  });
+  document.querySelectorAll('[data-i18n-placeholder]').forEach(el => {
+    const key = el.getAttribute('data-i18n-placeholder');
+    if (t[key] !== undefined) el.placeholder = t[key];
+  });
+}
+
+// Init
+updateNav();
+detectLang();
+</script>
+
+</body>
+</html>
