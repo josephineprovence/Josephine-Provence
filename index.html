@@ -292,6 +292,33 @@ button:focus-visible,a:focus-visible,input:focus-visible,textarea:focus-visible,
 :focus:not(:focus-visible){outline:none;}
 .sr-only{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0;}
 @media(prefers-reduced-motion:reduce){*,*::before,*::after{animation-duration:0.01ms!important;animation-iteration-count:1!important;transition-duration:0.01ms!important;scroll-behavior:auto!important;}.bg-photo,.t-bg,.m-bg img,.formule-img-bg{transition:none!important;}}
+
+/* ─── PROTECTION CONTENU ─── */
+*{-webkit-user-select:none;-moz-user-select:none;user-select:none;}
+input,textarea{-webkit-user-select:text;-moz-user-select:text;user-select:text;}
+
+/* Impression blanche */
+@media print{body{display:none !important;}}
+
+/* Watermark sur les images */
+.bg-photo::after,.t-bg::after,.m-bg::after,.formule-img-bg::after,.esprit-photo-col::after{
+  content:'josephine-provence.com';
+  position:absolute;inset:0;z-index:5;
+  display:flex;align-items:center;justify-content:center;
+  font-family:'Inter',sans-serif;font-size:clamp(0.55rem,1vw,0.75rem);
+  font-weight:400;letter-spacing:0.25em;text-transform:uppercase;
+  color:rgba(255,255,255,0.08);
+  background:repeating-linear-gradient(
+    -45deg,
+    transparent,
+    transparent 60px,
+    rgba(255,255,255,0.03) 60px,
+    rgba(255,255,255,0.03) 61px
+  );
+  pointer-events:none;
+}
+.esprit-photo-col{position:relative;}
+img{-webkit-user-drag:none;user-drag:none;}
 </style>
 
 <!-- Umami Analytics -->
@@ -337,36 +364,98 @@ button:focus-visible,a:focus-visible,input:focus-visible,textarea:focus-visible,
   </div>
 </section>
 
-<!-- ══ 1 · ESPRIT JOSÉPHINE ══ -->
-<section class="panel" id="esprit" aria-label="L'esprit Joséphine" style="background:#f0ede0;">
-  <div style="position:absolute;inset:0;background:linear-gradient(160deg,rgba(96,108,56,0.06) 0%,transparent 55%);pointer-events:none;z-index:0;"></div>
-  <div class="esprit-split overlay padless" style="position:relative;z-index:1;">
+<!-- ══ 1 · LES FORMULES + LISTE D'ATTENTE ══ -->
+<section class="panel panel-nuit" id="formules" aria-label="Nos formules">
+  <div class="formules-grid">
 
-    <!-- ── COLONNE TEXTE ── -->
-    <div class="esprit-left" style="grid-column:1/3;">
-      <span class="eyebrow-dark rise" data-i18n="esprit_eyebrow">L'esprit Joséphine</span>
-      <h2 class="section-h2-dark rise" style="animation-delay:0.1s;" data-i18n="esprit_title">Deux regards.<br>Un territoire.</h2>
+    <!-- COL GAUCHE : présentation des formules -->
+    <div class="formule-left">
 
-      <p class="body-dark rise" style="animation-delay:0.18s;margin-bottom:0.5rem;font-size:0.88rem;line-height:1.72;" data-i18n="esprit_hook">Il y a un onglet ouvert sur votre téléphone en ce moment. Peut-être deux. Un pour les hôtels, un pour les avis. On appelle ça «&thinsp;organiser un week-end&thinsp;». On devrait appeler ça ce que c'est&nbsp;: de la charge mentale déguisée en plaisir.</p>
-
-      <p class="body-dark rise" style="animation-delay:0.26s;margin-bottom:0.5rem;font-size:0.88rem;line-height:1.72;" data-i18n="esprit_punchline">Joséphine est née de cette fatigue-là. Pas seulement pour poser les valises mais pour oser les poser avec d'autres.</p>
-
-      <p class="body-dark rise" style="animation-delay:0.32s;margin-bottom:0;font-size:0.88rem;line-height:1.72;" data-i18n="esprit_territory">Le Sud n'est pas une destination. C'est une façon d'habiter le temps. Et ça ne se vit pas un téléphone à la main.</p>
-
-      <div class="rise" style="animation-delay:0.38s;" aria-label="Message de Justine et Naomi">
-        <p class="body-dark" style="font-size:0.88rem;line-height:1.72;" data-i18n="founders_charge">Alors on a pris la charge. Toute la charge : l'hébergement, les adresses, les trajets, les imprévus. Pour que tu arrives sans liste, sans plan B, les mains libres et la tête enfin silencieuse.</p>
-        <p class="body-dark" style="font-size:0.88rem;line-height:1.72;margin-bottom:0;" data-i18n="founders_invite">Ce n'est pas un programme. C'est une invitation. Tu arrives chez nous et on s'occupe du reste.</p>
-        <p class="founders-sig" style="margin-top:0.8rem;" data-i18n="founders_sig">Justine &amp; Naomi</p>
+      <div class="formule-block">
+        <span class="formule-tag rise" data-i18n="f1_tag">En solo · Slow Travel</span>
+        <h2 class="formule-title rise" style="animation-delay:0.08s" data-i18n="f1_title">Formule Sociale</h2>
+        <p class="formule-body rise" style="animation-delay:0.16s" data-i18n="f1_body">Tu arrives seul·e sans organiser quoi que ce soit, sans avoir à demander à un passant de te prendre en photo (tmtc). Huit personnes soigneusement choisies, le bon rythme, les bonnes adresses. On repart avec des prénoms, des fous rires, des numéros griffonnés sur un bout de serviette.</p>
+        <p class="formule-quote rise" style="animation-delay:0.22s" data-i18n="f1_quote">« Je venais chercher la Provence. Je rentre avec des rencontres pour la vie. »</p>
       </div>
 
-      <button type="button" class="btn-line-dark rise" style="animation-delay:0.52s;color:var(--sauge);border-color:rgba(96,108,56,0.4);margin-top:1.8rem;" onclick="document.getElementById('waitlist').scrollIntoView({behavior:'smooth'})" data-i18n="esprit_cta">Être prévenue en avant-première</button>
+      <div class="formule-block">
+        <span class="formule-tag rise" data-i18n="f2_tag">Entre proches · Sur mesure</span>
+        <h2 class="formule-title rise" style="animation-delay:0.08s" data-i18n="f2_title">Formule Privée</h2>
+        <p class="formule-body rise" style="animation-delay:0.16s" data-i18n="f2_body">Votre groupe, votre rythme et toute la Provence comme terrain de jeu privé. Dates libres, programme imaginé ensemble, maisons choisies avec vous. Il ne vous reste qu'à être ensemble.</p>
+        <p class="formule-quote rise" style="animation-delay:0.22s;color:var(--sauge-light);" data-i18n="f2_quote">« Le meilleur week-end qu'on n'a pas eu à planifier. »</p>
+        <div class="idea-chips" aria-label="Exemples de formats">
+          <span class="idea-chip" data-i18n="chip1">Château & dégustation</span>
+          <span class="idea-chip" data-i18n="chip2">Atelier cuisine</span>
+          <span class="idea-chip" data-i18n="chip3">Balade en mer</span>
+          <span class="idea-chip" data-i18n="chip4">Marché nocturne</span>
+          <span class="idea-chip" data-i18n="chip5">Cueillette de lavande</span>
+        </div>
+      </div>
+
     </div>
 
-    <!-- ── COLONNE PHOTO ── -->
-    <div class="esprit-photo-col">
-      <img src="/fondatrices.jpg" alt="Justine Héritier et Naomi Da-Kengba-Timo, co-fondatrices de Joséphine">
-    </div>
+    <!-- COL DROITE : liste d'attente -->
+    <div id="waitlist" class="formule-right" style="display:flex;flex-direction:column;justify-content:center;padding:7rem 4vw 2rem 3vw;box-sizing:border-box;border-left:1px solid rgba(254,250,224,0.08);overflow-y:auto;">
 
+      <span class="formule-tag rise" data-i18n="waitlist_eyebrow">Avant-première</span>
+      <h2 class="formule-title rise" style="font-size:clamp(1.3rem,1.7vw,2rem);animation-delay:0.08s;" data-i18n="waitlist_title">Les réservations<br>ouvrent bientôt.</h2>
+      <p class="formule-body rise" style="animation-delay:0.16s;" data-i18n="waitlist_intro">Laissez-nous votre e-mail, vous serez les premières à savoir quand les dates sont disponibles. Pas de spam, jamais. Juste une lettre, quand c'est le bon moment.</p>
+
+      <form id="waitlist-form" class="resa-form rise" style="animation-delay:0.25s;"
+        method="POST" aria-label="Formulaire liste d'attente" onsubmit="handleWaitlist(event)">
+        <input type="hidden" name="access_key" value="864f1139-3ca8-48b4-9cea-9208518a5863">
+        <input type="hidden" name="subject" value="Liste d'attente — Joséphine">
+        <input type="checkbox" name="botcheck" style="display:none" tabindex="-1" autocomplete="off">
+
+        <div class="resa-row">
+          <div class="resa-field">
+            <label for="waitlist-prenom" class="sr-only" data-i18n="waitlist_label_prenom">Prénom</label>
+            <input class="resa-input" type="text" id="waitlist-prenom" name="prenom"
+              autocomplete="given-name" required
+              data-i18n-placeholder="waitlist_placeholder_prenom" placeholder="Prénom">
+          </div>
+          <div class="resa-field">
+            <label for="waitlist-email" class="sr-only" data-i18n="waitlist_label_email">E-mail</label>
+            <input class="resa-input" type="email" id="waitlist-email" name="email"
+              autocomplete="email" required
+              data-i18n-placeholder="waitlist_placeholder_email" placeholder="E-mail">
+          </div>
+        </div>
+
+        <div class="resa-row" style="margin-top:0.6rem;">
+          <div class="resa-field">
+            <label for="waitlist-formule" class="sr-only" data-i18n="waitlist_label_formule">Intérêt</label>
+            <select class="resa-input resa-select" id="waitlist-formule" name="formule" required>
+              <option value="" disabled selected data-i18n="waitlist_select_default">Je suis intéressé·e par…</option>
+              <option value="sociale" data-i18n="waitlist_select_sociale">La Formule Sociale</option>
+              <option value="privee" data-i18n="waitlist_select_privee">La Formule Privée</option>
+              <option value="les_deux" data-i18n="waitlist_select_les_deux">Les deux, selon l'occasion</option>
+            </select>
+          </div>
+        </div>
+
+        <div style="margin-top:0.8rem;display:flex;align-items:flex-start;gap:0.75rem;">
+          <input type="checkbox" id="waitlist-newsletter" name="newsletter" value="oui"
+            style="margin-top:0.18rem;flex-shrink:0;width:14px;height:14px;accent-color:var(--ocre);cursor:pointer;">
+          <label for="waitlist-newsletter"
+            style="font-size:0.72rem;font-weight:300;line-height:1.6;color:rgba(254,250,224,0.5);cursor:pointer;"
+            data-i18n="waitlist_newsletter_label">
+            J'accepte également de recevoir Les Lettres de Joséphine : adresses secrètes, portraits d'artisans, art de ralentir. Un e-mail par mois, au maximum.
+          </label>
+        </div>
+
+        <button type="submit" class="resa-btn" data-i18n="waitlist_cta">Je veux être prévenue</button>
+        <p class="resa-note" data-i18n="waitlist_note">Aucun engagement · Aucun paiement · Vos données ne sont jamais partagées</p>
+      </form>
+
+      <div id="waitlist-confirm" style="display:none;padding:1.5rem;background:rgba(96,108,56,0.12);border:1px solid rgba(96,108,56,0.25);margin-top:1rem;"
+        role="alert" aria-live="polite">
+        <p style="font-size:0.82rem;font-weight:300;line-height:1.7;color:rgba(254,250,224,0.78);" data-i18n="waitlist_confirm">
+          C'est noté, merci. Vous serez parmi les premières à recevoir nos dates. En attendant, les Lettres de Joséphine vous attendent.
+        </p>
+      </div>
+
+    </div>
   </div>
 </section>
 
@@ -462,7 +551,40 @@ button:focus-visible,a:focus-visible,input:focus-visible,textarea:focus-visible,
   </div>
 </section>
 
-<!-- ══ 4 · L'EXPÉRIENCE ══ -->
+<!-- ══ 4 · ESPRIT JOSÉPHINE ══ -->
+<section class="panel" id="esprit" aria-label="L'esprit Joséphine" style="background:#f0ede0;">
+  <div style="position:absolute;inset:0;background:linear-gradient(160deg,rgba(96,108,56,0.06) 0%,transparent 55%);pointer-events:none;z-index:0;"></div>
+  <div class="esprit-split overlay padless" style="position:relative;z-index:1;">
+
+    <!-- ── COLONNE TEXTE ── -->
+    <div class="esprit-left" style="grid-column:1/3;">
+      <span class="eyebrow-dark rise" data-i18n="esprit_eyebrow">L'esprit Joséphine</span>
+      <h2 class="section-h2-dark rise" style="animation-delay:0.1s;" data-i18n="esprit_title">Deux regards.<br>Un territoire.</h2>
+
+      <p class="body-dark rise" style="animation-delay:0.18s;margin-bottom:0.5rem;font-size:0.88rem;line-height:1.72;" data-i18n="esprit_hook">Il y a un onglet ouvert sur votre téléphone en ce moment. Peut-être deux. Un pour les hôtels, un pour les avis. On appelle ça «&thinsp;organiser un week-end&thinsp;». On devrait appeler ça ce que c'est&nbsp;: de la charge mentale déguisée en plaisir.</p>
+
+      <p class="body-dark rise" style="animation-delay:0.26s;margin-bottom:0.5rem;font-size:0.88rem;line-height:1.72;" data-i18n="esprit_punchline">Joséphine est née de cette fatigue-là. Pas seulement pour poser les valises mais pour oser les poser avec d'autres.</p>
+
+      <p class="body-dark rise" style="animation-delay:0.32s;margin-bottom:0;font-size:0.88rem;line-height:1.72;" data-i18n="esprit_territory">Le Sud n'est pas une destination. C'est une façon d'habiter le temps. Et ça ne se vit pas un téléphone à la main.</p>
+
+      <div class="rise" style="animation-delay:0.38s;" aria-label="Message de Justine et Naomi">
+        <p class="body-dark" style="font-size:0.88rem;line-height:1.72;" data-i18n="founders_charge">Alors on a pris la charge. Toute la charge : l'hébergement, les adresses, les trajets, les imprévus. Pour que tu arrives sans liste, sans plan B, les mains libres et la tête enfin silencieuse.</p>
+        <p class="body-dark" style="font-size:0.88rem;line-height:1.72;margin-bottom:0;" data-i18n="founders_invite">Ce n'est pas un programme. C'est une invitation. Tu arrives chez nous et on s'occupe du reste.</p>
+        <p class="founders-sig" style="margin-top:0.8rem;" data-i18n="founders_sig">Justine &amp; Naomi</p>
+      </div>
+
+      <button type="button" class="btn-line-dark rise" style="animation-delay:0.52s;color:var(--sauge);border-color:rgba(96,108,56,0.4);margin-top:1.8rem;" onclick="document.getElementById('waitlist').scrollIntoView({behavior:'smooth'})" data-i18n="esprit_cta">Être prévenue en avant-première</button>
+    </div>
+
+    <!-- ── COLONNE PHOTO ── -->
+    <div class="esprit-photo-col">
+      <img src="/fondatrices.jpg" alt="Justine Héritier et Naomi Da-Kengba-Timo, co-fondatrices de Joséphine">
+    </div>
+
+  </div>
+</section>
+
+<!-- ══ 5 · L'EXPÉRIENCE ══ -->
 <section class="panel" id="experience" aria-label="L'expérience Joséphine" style="background:var(--nuit);">
   <div class="overlay padless" style="display:grid;grid-template-columns:55% 45%;height:100%;width:100%;">
 
@@ -491,101 +613,6 @@ button:focus-visible,a:focus-visible,input:focus-visible,textarea:focus-visible,
       </div>
     </div>
 
-  </div>
-</section>
-
-<!-- ══ 5 · LES FORMULES + LISTE D'ATTENTE ══ -->
-<section class="panel panel-nuit" id="formules" aria-label="Nos formules">
-  <div class="formules-grid">
-
-    <!-- COL GAUCHE : présentation des formules -->
-    <div class="formule-left">
-
-      <div class="formule-block">
-        <span class="formule-tag rise" data-i18n="f1_tag">En solo · Slow Travel</span>
-        <h2 class="formule-title rise" style="animation-delay:0.08s" data-i18n="f1_title">Formule Sociale</h2>
-        <p class="formule-body rise" style="animation-delay:0.16s" data-i18n="f1_body">Tu arrives seul·e sans organiser quoi que ce soit, sans avoir à demander à un passant de te prendre en photo (tmtc). Huit personnes soigneusement choisies, le bon rythme, les bonnes adresses. On repart avec des prénoms, des fous rires, des numéros griffonnés sur un bout de serviette.</p>
-        <p class="formule-quote rise" style="animation-delay:0.22s" data-i18n="f1_quote">« Je venais chercher la Provence. Je rentre avec des rencontres pour la vie. »</p>
-      </div>
-
-      <div class="formule-block">
-        <span class="formule-tag rise" data-i18n="f2_tag">Entre proches · Sur mesure</span>
-        <h2 class="formule-title rise" style="animation-delay:0.08s" data-i18n="f2_title">Formule Privée</h2>
-        <p class="formule-body rise" style="animation-delay:0.16s" data-i18n="f2_body">Votre groupe, votre rythme et toute la Provence comme terrain de jeu privé. Dates libres, programme imaginé ensemble, maisons choisies avec vous. Il ne vous reste qu'à être ensemble.</p>
-        <p class="formule-quote rise" style="animation-delay:0.22s;color:var(--sauge-light);" data-i18n="f2_quote">« Le meilleur week-end qu'on n'a pas eu à planifier. »</p>
-        <div class="idea-chips" aria-label="Exemples de formats">
-          <span class="idea-chip" data-i18n="chip1">Château & dégustation</span>
-          <span class="idea-chip" data-i18n="chip2">Atelier cuisine</span>
-          <span class="idea-chip" data-i18n="chip3">Balade en mer</span>
-          <span class="idea-chip" data-i18n="chip4">Marché nocturne</span>
-          <span class="idea-chip" data-i18n="chip5">Cueillette de lavande</span>
-        </div>
-      </div>
-
-    </div>
-
-    <!-- COL DROITE : liste d'attente -->
-    <div id="waitlist" class="formule-right" style="display:flex;flex-direction:column;justify-content:center;padding:7rem 4vw 2rem 3vw;box-sizing:border-box;border-left:1px solid rgba(254,250,224,0.08);overflow-y:auto;">
-
-      <span class="formule-tag rise" data-i18n="waitlist_eyebrow">Avant-première</span>
-      <h2 class="formule-title rise" style="font-size:clamp(1.3rem,1.7vw,2rem);animation-delay:0.08s;" data-i18n="waitlist_title">Les réservations<br>ouvrent bientôt.</h2>
-      <p class="formule-body rise" style="animation-delay:0.16s;" data-i18n="waitlist_intro">Laissez-nous votre e-mail, vous serez les premières à savoir quand les dates sont disponibles. Pas de spam, jamais. Juste une lettre, quand c'est le bon moment.</p>
-
-      <form id="waitlist-form" class="resa-form rise" style="animation-delay:0.25s;"
-        method="POST" aria-label="Formulaire liste d'attente" onsubmit="handleWaitlist(event)">
-        <input type="hidden" name="access_key" value="864f1139-3ca8-48b4-9cea-9208518a5863">
-        <input type="hidden" name="subject" value="Liste d'attente — Joséphine">
-        <input type="checkbox" name="botcheck" style="display:none" tabindex="-1" autocomplete="off">
-
-        <div class="resa-row">
-          <div class="resa-field">
-            <label for="waitlist-prenom" class="sr-only" data-i18n="waitlist_label_prenom">Prénom</label>
-            <input class="resa-input" type="text" id="waitlist-prenom" name="prenom"
-              autocomplete="given-name" required
-              data-i18n-placeholder="waitlist_placeholder_prenom" placeholder="Prénom">
-          </div>
-          <div class="resa-field">
-            <label for="waitlist-email" class="sr-only" data-i18n="waitlist_label_email">E-mail</label>
-            <input class="resa-input" type="email" id="waitlist-email" name="email"
-              autocomplete="email" required
-              data-i18n-placeholder="waitlist_placeholder_email" placeholder="E-mail">
-          </div>
-        </div>
-
-        <div class="resa-row" style="margin-top:0.6rem;">
-          <div class="resa-field">
-            <label for="waitlist-formule" class="sr-only" data-i18n="waitlist_label_formule">Intérêt</label>
-            <select class="resa-input resa-select" id="waitlist-formule" name="formule" required>
-              <option value="" disabled selected data-i18n="waitlist_select_default">Je suis intéressé·e par…</option>
-              <option value="sociale" data-i18n="waitlist_select_sociale">La Formule Sociale</option>
-              <option value="privee" data-i18n="waitlist_select_privee">La Formule Privée</option>
-              <option value="les_deux" data-i18n="waitlist_select_les_deux">Les deux, selon l'occasion</option>
-            </select>
-          </div>
-        </div>
-
-        <div style="margin-top:0.8rem;display:flex;align-items:flex-start;gap:0.75rem;">
-          <input type="checkbox" id="waitlist-newsletter" name="newsletter" value="oui"
-            style="margin-top:0.18rem;flex-shrink:0;width:14px;height:14px;accent-color:var(--ocre);cursor:pointer;">
-          <label for="waitlist-newsletter"
-            style="font-size:0.72rem;font-weight:300;line-height:1.6;color:rgba(254,250,224,0.5);cursor:pointer;"
-            data-i18n="waitlist_newsletter_label">
-            J'accepte également de recevoir Les Lettres de Joséphine : adresses secrètes, portraits d'artisans, art de ralentir. Un e-mail par mois, au maximum.
-          </label>
-        </div>
-
-        <button type="submit" class="resa-btn" data-i18n="waitlist_cta">Je veux être prévenue</button>
-        <p class="resa-note" data-i18n="waitlist_note">Aucun engagement · Aucun paiement · Vos données ne sont jamais partagées</p>
-      </form>
-
-      <div id="waitlist-confirm" style="display:none;padding:1.5rem;background:rgba(96,108,56,0.12);border:1px solid rgba(96,108,56,0.25);margin-top:1rem;"
-        role="alert" aria-live="polite">
-        <p style="font-size:0.82rem;font-weight:300;line-height:1.7;color:rgba(254,250,224,0.78);" data-i18n="waitlist_confirm">
-          C'est noté, merci. Vous serez parmi les premières à recevoir nos dates. En attendant, les Lettres de Joséphine vous attendent.
-        </p>
-      </div>
-
-    </div>
   </div>
 </section>
 
@@ -725,10 +752,22 @@ button:focus-visible,a:focus-visible,input:focus-visible,textarea:focus-visible,
 
 </section>
 
+
+
 </main>
 
 <script>
 document.addEventListener('DOMContentLoaded', function() {
+
+// ─── PROTECTION CONTENU ───
+document.addEventListener('contextmenu', e => e.preventDefault());
+document.addEventListener('keydown', e => {
+  if (e.ctrlKey && ['c','u','s','a','p'].includes(e.key.toLowerCase())) e.preventDefault();
+  if (e.metaKey && ['c','u','s','a','p'].includes(e.key.toLowerCase())) e.preventDefault();
+});
+document.addEventListener('dragstart', e => e.preventDefault());
+document.addEventListener('drop', e => e.preventDefault());
+
 // ─── NAV ───
 const nav = document.getElementById('nav');
 const scroller = document.getElementById('scroller');
@@ -738,8 +777,8 @@ function isDarkSection() {
   const scrollY = isMobile() ? window.scrollY : scroller.scrollTop;
   const vh = window.innerHeight;
   const idx = Math.round(scrollY / vh);
-  // 0=hero(dark), 1=esprit(light), 2=territoire(dark), 3=journee(light), 4=experience(dark), 5=formules(dark), 6=lettres(dark), 7=contact(dark), 8=footer(dark)
-  return [0, 2, 4, 5, 6, 7, 8].includes(idx);
+  // 0=hero(dark), 1=formules(dark), 2=territoire(dark), 3=journee(light), 4=esprit(light), 5=experience(dark), 6=lettres(dark), 7=contact(dark), 8=footer(dark)
+  return [0, 1, 2, 5, 6, 7, 8].includes(idx);
 }
 
 function updateNav() {
