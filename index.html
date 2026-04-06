@@ -13,13 +13,13 @@
 <meta property="og:url" content="https://josephine-provence.com/">
 <meta property="og:title" content="Joséphine — Échappées Provençales Secrètes">
 <meta property="og:description" content="Week-ends slow travel en Provence. Alpilles, Luberon, Vaucluse — des rencontres, des adresses secrètes, zéro charge mentale.">
-<meta property="og:image" content="https://josephine-provence.com/hero.jpg">
+<meta property="og:image" content="https://josephine-provence.com/hero.jpeg">
 <meta property="og:locale" content="fr_FR">
 <meta property="og:site_name" content="Joséphine">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="Joséphine — Échappées Provençales Secrètes">
 <meta name="twitter:description" content="Week-ends slow travel en Provence. Alpilles, Luberon, Vaucluse.">
-<meta name="twitter:image" content="https://josephine-provence.com/hero.jpg">
+<meta name="twitter:image" content="https://josephine-provence.com/hero.jpeg">
 <link rel="icon" href="/logo.svg" type="image/svg+xml">
 
 <script type="application/ld+json">
@@ -126,10 +126,12 @@ body{font-family:'Inter',sans-serif;background:var(--creme);color:var(--nuit);ov
 .hero-eyebrow{font-size:clamp(0.55rem,1.1vw,0.82rem);letter-spacing:0.5em;text-transform:uppercase;color:rgba(254,250,224,0.78);margin-bottom:1rem;font-weight:400;}
 .hero-h1{font-family:'Playfair Display',serif;font-size:clamp(3.8rem,10vw,10rem);line-height:0.9;font-weight:400;color:var(--creme);margin-bottom:2rem;}
 .hero-sub{font-family:'Cormorant Garamond',serif;font-size:clamp(1.1rem,2.5vw,1.8rem);font-style:italic;font-weight:300;color:rgba(254,250,224,0.7);}
+.hero-tagline{font-family:'Inter',sans-serif;font-size:clamp(0.65rem,1.2vw,0.82rem);font-weight:300;letter-spacing:0.18em;text-transform:uppercase;color:rgba(254,250,224,0.52);margin-top:1.2rem;}
 @media(max-width:768px){
   .hero-h1{font-size:clamp(3.5rem,18vw,6rem);margin-bottom:1.2rem;}
   .hero-sub{font-size:1.1rem;}
   .hero-eyebrow{font-size:0.52rem;letter-spacing:0.4em;}
+  .hero-tagline{font-size:0.6rem;letter-spacing:0.14em;}
 }
 
 /* ─── COLOURS ─── */
@@ -321,12 +323,13 @@ button:focus-visible,a:focus-visible,input:focus-visible,textarea:focus-visible,
 
 <!-- ══ 0 · HERO ══ -->
 <section class="panel" id="hero" tabindex="-1" aria-label="Accueil">
-  <div class="bg-photo" role="img" aria-label="Trois amies avec leurs vélos dans une ruelle ensoleillée d'Avignon, pierres dorées et lumière du sud" style="background-image:url('/hero.jpg');background-position:center 40%;"></div>
+  <div class="bg-photo" role="img" aria-label="Trois amies avec leurs vélos dans une ruelle ensoleillée d'Avignon, pierres dorées et lumière du sud" style="background-image:url('/hero.jpeg');background-position:center 40%;"></div>
   <div class="vignette" aria-hidden="true"></div>
   <div class="overlay center">
-    <span class="hero-eyebrow rise" data-i18n="hero_eyebrow">Slow Travel · Alpilles · Luberon · Vaucluse</span>
+    <span class="hero-eyebrow rise" data-i18n="hero_eyebrow">Week-ends en Provence · Alpilles · Luberon · Vaucluse</span>
     <h1 class="hero-h1 rise" style="animation-delay:0.2s">Joséphine.</h1>
-    <p class="hero-sub rise" style="animation-delay:0.45s" data-i18n="hero_sub">Partir seul·e ne veut pas dire être seul·e.</p>
+    <p class="hero-sub rise" style="animation-delay:0.45s" data-i18n="hero_sub">Partir seule ne veut pas dire être seule.</p>
+    <p class="hero-tagline rise" style="animation-delay:0.65s" data-i18n="hero_tagline">Des séjours entièrement organisés, pour partir enfin sans rien gérer.</p>
   </div>
   <div class="scroll-cue rise" style="animation-delay:0.9s">
     <span data-i18n="scroll_cue">Découvrir</span>
@@ -852,8 +855,9 @@ function handleFooterNewsletter(e) {
 const translations = {
   fr: {
     nav_cta:'Avant-première',
-    hero_eyebrow:'Slow Travel · Alpilles · Luberon · Vaucluse',
-    hero_sub:'Partir seul·e ne veut pas dire être seul·e.',
+    hero_eyebrow:'Week-ends en Provence · Alpilles · Luberon · Vaucluse',
+    hero_sub:'Partir seule ne veut pas dire être seule.',
+    hero_tagline:'Des séjours entièrement organisés, pour partir enfin sans rien gérer.',
     scroll_cue:'Découvrir',
     esprit_eyebrow:"L'esprit Joséphine",
     esprit_title:'Deux regards.<br>Un territoire.',
@@ -921,8 +925,9 @@ const translations = {
 
   en: {
     nav_cta:'Get early access',
-    hero_eyebrow:'Slow Travel · Alpilles · Luberon · Vaucluse',
+    hero_eyebrow:'Weekend Escapes in Provence · Alpilles · Luberon · Vaucluse',
     hero_sub:"Traveling solo doesn't have to mean being alone.",
+    hero_tagline:'Fully managed escapes, so you can finally arrive with nothing to handle.',
     scroll_cue:'Explore',
     esprit_eyebrow:'The Joséphine story',
     esprit_title:'Two women.<br>One territory.',
